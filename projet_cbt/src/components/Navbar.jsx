@@ -1,6 +1,7 @@
 import React from "react";
 import "../assets/css/navbar.css";
 import { Link } from "react-router-dom";
+import logo from "../assets/images/logo.jpg";
 
 class Navbar extends React.Component {
   render() {
@@ -9,8 +10,8 @@ class Navbar extends React.Component {
         <div className="container">
 
           {/* Logo */}
-          <Link className="navbar-brand fw-bold text-white" to="/">
-            Convention Baptiste du Togo
+          <Link className="navbar-brand text-white" to="/">
+            <img src={logo} alt="Logo CBT" className="logo" />
           </Link>
 
           {/* Toggler */}
