@@ -19,7 +19,8 @@ class AppRouter extends React.Component {
   render() {
     return (
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* Page d'accueil */}
+        <Route path="/" element={<Page title="Accueil" />} />
 
         {/* Découvrir la CBT */}
         <Route path="/mot-president" element={<Page title="Mot du Président" />} />

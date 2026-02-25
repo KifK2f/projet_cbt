@@ -9,7 +9,7 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
 import Navbar from './components/Navbar'
 import { BrowserRouter, Route, Link, Routes } from "react-router-dom"
 import AppRouter from './components/AppRouter'
-
+import Footer from './components/footer'
 
 
 //Link permet de changeer d'URL sans recharger la page
@@ -24,6 +24,7 @@ function App() {
           <div className="content-wrapper">
             <AppRouter />
           </div>
+          <Footer />
       </BrowserRouter>
     </>
   )
