@@ -1,4 +1,7 @@
 import React from 'react'
+import ded1 from "../assets/images/dedicace-temple-Diguéngué/dedicace-Diguéngue_1.jpeg";
+import ded2 from "../assets/images/dedicace-temple-Diguéngué/dedicace-Diguéngue_2.jpeg";
+import ded3 from "../assets/images/dedicace-temple-Diguéngué/dedicace-Diguéngue_3.jpeg";
 
 class Home extends React.Component {
 
@@ -20,38 +23,38 @@ class Home extends React.Component {
               </div>
               <div className="carousel-inner">
 
-                <div className="carousel-item active">
-                  <div className="d-block w-100 bg-secondary" style={{height: '32rem'}}></div>
-                  <div className="container">
-                    <div className="carousel-caption text-start">
-                      <h1>Présentation institutionnelle</h1>
-                      <p>Découvrez notre mission et notre vision.</p>
-                      <p><a className="btn btn-lg btn-primary" href="/don">Faire un don</a></p>
-                    </div>
-                  </div>
+              <div className="carousel-item active">
+              <img src={ded1} className="d-block w-100" alt="Slide 1" style={{height: '32rem', objectFit: 'cover'}} />
+              <div className="container">
+                <div className="carousel-caption text-start">
+                  <h1>Présentation institutionnelle</h1>
+                  <p>Découvrez notre mission et notre vision.</p>
+                  <p><a className="btn btn-lg btn-primary" href="/don">Faire un don</a></p>
                 </div>
+              </div>
+            </div>
 
-                <div className="carousel-item">
-                  <div className="d-block w-100 bg-secondary" style={{height: '32rem'}}></div>
-                  <div className="container">
-                    <div className="carousel-caption">
-                      <h1>Actualités à la une</h1>
-                      <p>Restez informé des dernières nouvelles de la CBT.</p>
-                      <p><a className="btn btn-lg btn-primary" href="/actualites">Voir actualités</a></p>
-                    </div>
-                  </div>
+            <div className="carousel-item">
+              <img src={ded2} className="d-block w-100" alt="Slide 2" style={{height: '32rem', objectFit: 'cover'}} />
+              <div className="container">
+                <div className="carousel-caption">
+                  <h1>Actualités à la une</h1>
+                  <p>Restez informé des dernières nouvelles de la CBT.</p>
+                  <p><a className="btn btn-lg btn-primary" href="/actualites">Voir actualités</a></p>
                 </div>
+              </div>
+            </div>
 
-                <div className="carousel-item">
-                  <div className="d-block w-100 bg-secondary" style={{height: '32rem'}}></div>
-                  <div className="container">
-                    <div className="carousel-caption text-end">
-                      <h1>Prochains événements</h1>
-                      <p>Ne manquez pas nos activités et rencontres à venir.</p>
-                      <p><a className="btn btn-lg btn-primary" href="/evenements">Voir événements</a></p>
-                    </div>
-                  </div>
+            <div className="carousel-item">
+              <img src={ded3} className="d-block w-100" alt="Slide 3" style={{height: '32rem', objectFit: 'cover'}} />
+              <div className="container">
+                <div className="carousel-caption text-end">
+                  <h1>Prochains événements</h1>
+                  <p>Ne manquez pas nos activités et rencontres à venir.</p>
+                  <p><a className="btn btn-lg btn-primary" href="/evenements">Voir événements</a></p>
                 </div>
+              </div>
+            </div>
 
               </div>
               <button className="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
