@@ -5,6 +5,8 @@ import ded3 from "../assets/images/dedicace-temple-Diguéngué/dedicace-Diguéng
 import ded4 from "../assets/images/dedicace-temple-Diguéngué/dedicace-Diguéngue_4.jpeg";
 import ded5 from "../assets/images/dedicace-temple-Diguéngué/dedicace-Diguéngue_5.jpeg";
 
+import presidentCBT from "../assets/images/bureauCBT/PresidentCBT.jpeg"
+
 class Home extends React.Component {
 
   render() {
@@ -142,7 +144,7 @@ class Home extends React.Component {
                   }}
                 ></div>
                 <img 
-                  src={ded1} // Remplace par la photo du président
+                  src={presidentCBT} // Remplace par la photo du président
                   alt="Président de la CBT" 
                   className="img-fluid rounded-4 shadow-lg"
                   style={{ width: '100%', height: '500px', objectFit: 'cover' }}
@@ -152,7 +154,7 @@ class Home extends React.Component {
 
             {/* Colonne Texte */}
             <div className="col-md-7">
-              <h6 className="text-primary fw-bold text-uppercase mb-2">Mot de Bienvenue</h6>
+              <h6 className="fw-bold text-uppercase mb-2" style={{ color: '#df600d'}}>Mot de Bienvenue</h6>
               <h2 className="display-5 fw-bold mb-4">Porter ensemble notre vision pour l'avenir</h2>
               
               <div className="position-relative">
@@ -172,18 +174,11 @@ class Home extends React.Component {
               </p>
 
               <div className="d-flex align-items-center mt-5">
-                <div className="border-start border-primary border-4 ps-3">
+                <div className="border-start border-4 ps-3">
                   <h5 className="fw-bold mb-0">Nom du Président</h5>
                   <p className="text-muted mb-0">Président Fondateur de la CBT</p>
                 </div>
-                {/* Optionnel: Signature manuscrite si on a une image */}
-                {/* <img src={signature} alt="Signature" className="ms-4" style={{height: '50px'}} /> */}
-              </div>
-              
-              <div className="mt-4">
-                <a href="/biographie" className="btn btn-primary btn-lg rounded-pill px-4 shadow-sm">
-                  Lire la biographie complète
-                </a>
+                
               </div>
             </div>
 
