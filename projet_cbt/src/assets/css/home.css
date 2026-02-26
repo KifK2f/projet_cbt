@@ -1,0 +1,17 @@
+.president-btn {
+  background-color: #df600d;
+  color: white;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.president-btn:hover {
+  background-color: #df600d;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(230, 94, 4, 0.849);
+}
+
+.president-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(245, 101, 5, 0.884);
+}
