@@ -261,7 +261,7 @@ class Home extends React.Component {
 </section>
 
         {/* ================= SECTION APPEL AU DON ================= */}
-        <section className="bg-primary text-white text-center py-5">
+        <section className="text-white text-center py-5" style={{ backgroundColor: '#df600d'}}>
   <div className="container">
     <h2 className="fw-bold mb-3">
       Soutenez notre mission

@@ -21,22 +21,22 @@ class Footer extends React.Component {
               </p>
 
               <div className="d-flex align-items-start mb-2">
-                <LocationOnIcon className="me-2 text-warning" />
+                <LocationOnIcon className="me-2" style={{ color: '#df600d'}}/>
                 <small>Siège : ..., ...</small>
               </div>
 
               <div className="d-flex align-items-start mb-2">
-                <PhoneIcon className="me-2 text-warning" />
+                <PhoneIcon className="me-2" style={{ color: '#df600d'}} />
                 <small>(+228) XX XX XX XX / (+228) XX XX XX XX</small>
               </div>
 
               <div className="d-flex align-items-start mb-2">
-                <EmailIcon className="me-2 text-warning" />
+                <EmailIcon className="me-2" style={{ color: '#df600d'}} />
                 <small>....@....</small>
               </div>
 
               <div className="d-flex align-items-start">
-                <LanguageIcon className="me-2 text-warning" />
+                <LanguageIcon className="me-2" style={{ color: '#df600d'}} />
                 <small>www......</small>
               </div>
             </div>
@@ -70,8 +70,8 @@ class Footer extends React.Component {
                 Soutenez nos actions missionnaires et sociales.
               </p>
 
-              <a href="/don" className="btn btn-warning w-100 mb-3 fw-bold">
-                <FavoriteIcon className="me-2" />
+              <a href="/don" className="btn w-100 mb-3 fw-bold text-white" style={{ backgroundColor: '#df600d'}}>
+                <FavoriteIcon className="me-2" style={{ color: 'white'}} />
                 Faire un don
               </a>
 
@@ -81,7 +81,7 @@ class Footer extends React.Component {
                   className="form-control"
                   placeholder="Votre email"
                 />
-                <button className="btn btn-warning fw-bold text-hover-white" >
+                <button className="btn fw-bold text-white" style={{ backgroundColor: '#df600d'}} >
                   S'abonner
                 </button>
               </div>
