@@ -59,7 +59,7 @@ class Home extends React.Component {
                 <div className="carousel-caption text-start">
                   <h1>Présentation institutionnelle</h1>
                   <p>Découvrez notre mission et notre vision.</p>
-                  <p><a className="btn btn-lg btn-primary" href="/don">Faire un don</a></p>
+                  <p><a className="btn btn-lg" style={{ backgroundColor: '#df600d'}} href="/don">Faire un don</a></p>
                 </div>
               </div>
             </div>
@@ -70,7 +70,7 @@ class Home extends React.Component {
                 <div className="carousel-caption">
                   <h1>Actualités à la une</h1>
                   <p>Restez informé des dernières nouvelles de la CBT.</p>
-                  <p><a className="btn btn-lg btn-primary" href="/actualites">Voir actualités</a></p>
+                  <p><a className="btn btn-lg" style={{ backgroundColor: '#df600d'}} href="/actualites">Voir actualités</a></p>
                 </div>
               </div>
             </div>
@@ -81,7 +81,7 @@ class Home extends React.Component {
                 <div className="carousel-caption text-end">
                   <h1>Prochains événements</h1>
                   <p>Ne manquez pas nos activités et rencontres à venir.</p>
-                  <p><a className="btn btn-lg btn-primary" href="/evenements">Voir événements</a></p>
+                  <p><a className="btn btn-lg" style={{ backgroundColor: '#df600d'}} href="/evenements">Voir événements</a></p>
                 </div>
               </div>
             </div>
@@ -242,19 +242,19 @@ class Home extends React.Component {
         <section className="container py-5 text-center">
   <div className="row">
     <div className="col-md-3">
-      <h2 className="fw-bold text-primary">20+</h2>
+      <h2 className="fw-bold" style={{ color: '#df600d'}}>20+</h2>
       <p>Années d’impact</p>
     </div>
     <div className="col-md-3">
-      <h2 className="fw-bold text-primary">5 000+</h2>
+      <h2 className="fw-bold" style={{ color: '#df600d'}}>5 000+</h2>
       <p>Membres accompagnés</p>
     </div>
     <div className="col-md-3">
-      <h2 className="fw-bold text-primary">150+</h2>
+      <h2 className="fw-bold" style={{ color: '#df600d'}}>150+</h2>
       <p>Événements organisés</p>
     </div>
     <div className="col-md-3">
-      <h2 className="fw-bold text-primary">12+</h2>
+      <h2 className="fw-bold" style={{ color: '#df600d'}}>12+</h2>
       <p>Programmes actifs</p>
     </div>
   </div>
