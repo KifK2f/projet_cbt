@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Routes } from "react-router-dom"
 import Home from './Home'
+import MotPresident from './MotPresident'
 
 // Composant générique pour les pages
 const Page = ({ title, children }) => (
@@ -23,7 +24,7 @@ class AppRouter extends React.Component {
         <Route path="/" element={<Home/>} />
 
         {/* Découvrir la CBT */}
-        <Route path="/mot-president" element={<Page title="Mot du Président" />} />
+        <Route path="/mot-president" element={<MotPresident/>} />
         <Route path="/notre-histoire" element={<Page title="Notre Histoire" />} />
         <Route path="/mission-valeurs" element={<Page title="Mission et Valeurs" />} />
         <Route path="/organisation-gouvernance" element={<Page title="Organisation et Gouvernance" />} />
