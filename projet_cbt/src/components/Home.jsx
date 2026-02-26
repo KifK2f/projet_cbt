@@ -9,7 +9,35 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div>
+      <>
+      {/* Section Hero */}
+
+{/* <section className="position-relative">
+  <img 
+    src={ded1}
+    className="w-100"
+    alt="CBT"
+    style={{height: "600px", objectFit: "cover"}}
+  />
+
+  <div className="position-absolute top-50 start-50 translate-middle text-center text-white">
+    <h1 className="display-4 fw-bold">
+      Construire une communauté forte dans la foi
+    </h1>
+    <p className="lead">
+      Ensemble, portons la vision du Royaume et impactons notre génération.
+    </p>
+    <div className="mt-4">
+      <a href="/don" className="btn btn-primary btn-lg rounded-pill px-4 me-3">
+        Faire un don
+      </a>
+      <a href="/mission-valeurs" className="btn btn-outline-light btn-lg rounded-pill px-4">
+        Découvrir notre mission
+      </a>
+    </div>
+  </div>
+</section> */}
+
 
         <div id="homeCarousel" className="carousel slide" data-bs-ride="carousel">
           
@@ -66,124 +94,188 @@ class Home extends React.Component {
 
         </div>
 
-        {/* ================= ABOUT SECTION ================= */}
-        <section className="container mt-5">
-          <div className="row align-items-center">
-            <div className="col-md-6">
-              <h2 className="fw-bold">
-                About Our Institution
-              </h2>
-              <p className="text-muted">
-                Since 2021, our institution has been a place of faith, unity and growth.
-                We guide believers and support communities with impactful programs.
-              </p>
-            </div>
+        {/* ================= SECTION MISSION & VISION ================= */}
+        <section className="container py-5">
+  <div className="row align-items-center">
+    
+    <div className="col-md-6">
+      <h2 className="fw-bold mb-4">Notre Mission</h2>
+      <p className="text-muted">
+        La CBT œuvre pour l’édification spirituelle, le soutien social 
+        et le développement communautaire. Nous croyons qu’une foi vivante 
+        transforme les individus et les nations.
+      </p>
+      <p className="text-muted">
+        À travers nos programmes, formations et événements, nous accompagnons 
+        chaque membre dans sa croissance personnelle et spirituelle.
+      </p>
+    </div>
 
-            <div className="col-md-6">
-              <div className="row g-3">
+    <div className="col-md-6">
+      <img 
+        src={ded2}
+        className="img-fluid rounded-4 shadow"
+        style={{height: "400px", objectFit: "cover", width:"100%"}}
+        alt="Mission"
+      />
+    </div>
 
-                <div className="col-6">
-                  <div className="card bg-dark text-white rounded-4 p-4 border-0 h-100">
-                    <h5>Professional Guidance</h5>
-                    <p className="small">
-                      Structured spiritual mentoring and leadership.
-                    </p>
-                  </div>
-                </div>
+  </div>
+</section>
 
-                <div className="col-6">
-                  <div className="card bg-primary text-white rounded-4 p-4 border-0 h-100">
-                    <h5>Community Programs</h5>
-                    <p className="small">
-                      Events and outreach activities for everyone.
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ================= STATS SECTION ================= */}
-        <section className="container mt-5 text-center">
-          <h4 className="mb-4">A few facts in numbers</h4>
-
-          <div className="row">
-            <div className="col-md-3">
-              <h2 className="fw-bold">12 000+</h2>
-              <p className="text-muted">Hours of service</p>
-            </div>
-
-            <div className="col-md-3">
-              <h2 className="fw-bold">89%</h2>
-              <p className="text-muted">Member retention</p>
-            </div>
-
-            <div className="col-md-3">
-              <h2 className="fw-bold">1,200+</h2>
-              <p className="text-muted">Active members</p>
-            </div>
-
-            <div className="col-md-3">
-              <h2 className="fw-bold">125+</h2>
-              <p className="text-muted">Annual events</p>
-            </div>
-          </div>
-        </section>
-
-        {/* ================= SERVICES SECTION ================= */}
-        <section className="container mt-5 mb-5">
-          <div className="row align-items-center">
-
-            <div className="col-md-4">
-              <h3 className="fw-bold">Our Services</h3>
-              <p className="text-muted">
-                Explore our programs, training, events and community services.
-              </p>
-              <a href="/services" className="btn btn-outline-dark rounded-pill">
-                Explore More
-              </a>
-            </div>
-
-            <div className="col-md-4">
-              <div className="card border-0 rounded-4 overflow-hidden shadow-sm">
-                <img
-                  src={ded4}
-                  className="w-100"
-                  alt="Service 1"
-                  style={{ height: "250px", objectFit: "cover" }}
+        {/* ================= MOT DU PRÉSIDENT ================= */}
+        <section className="container my-5 py-5">
+          <div className="row align-items-center g-5">
+            
+            {/* Colonne Image avec effet de style */}
+            <div className="col-md-5">
+              <div className="position-relative">
+                {/* Cadre décoratif en arrière-plan */}
+                <div 
+                  className="position-absolute border border-primary rounded-4" 
+                  style={{ 
+                    top: '20px', 
+                    left: '20px', 
+                    width: '100%', 
+                    height: '100%', 
+                    zIndex: -1 
+                  }}
+                ></div>
+                <img 
+                  src={ded1} // Remplace par la photo du président
+                  alt="Président de la CBT" 
+                  className="img-fluid rounded-4 shadow-lg"
+                  style={{ width: '100%', height: '500px', objectFit: 'cover' }}
                 />
-                <div className="card-body">
-                  <h5>Training Programs</h5>
-                  <p className="small text-muted">
-                    Programs designed for all ages and abilities.
-                  </p>
-                </div>
               </div>
             </div>
 
-            <div className="col-md-4">
-              <div className="card border-0 rounded-4 overflow-hidden shadow-sm">
-                <img
-                  src={ded5}
-                  className="w-100"
-                  alt="Service 2"
-                  style={{ height: "250px", objectFit: "cover" }}
-                />
-                <div className="card-body">
-                  <h5>Events & Activities</h5>
-                  <p className="small text-muted">
-                    Grow spiritually through impactful gatherings.
-                  </p>
+            {/* Colonne Texte */}
+            <div className="col-md-7">
+              <h6 className="text-primary fw-bold text-uppercase mb-2">Mot de Bienvenue</h6>
+              <h2 className="display-5 fw-bold mb-4">Porter ensemble notre vision pour l'avenir</h2>
+              
+              <div className="position-relative">
+                <i className="bi bi-quote fs-1 text-primary opacity-25 position-absolute top-0 start-0 translate-middle-y"></i>
+                <p className="lead text-dark font-italic mb-4 ps-4">
+                  "C'est un honneur de vous accueillir sur notre plateforme. Depuis notre création, 
+                  notre engagement reste le même : servir la communauté avec foi, intégrité et dévouement. 
+                  Ensemble, nous bâtissons un héritage de paix et de solidarité."
+                </p>
+              </div>
+
+              <p className="text-muted mb-4">
+                Chers membres et partenaires, notre mission ne se limite pas à nos activités quotidiennes. 
+                Elle s'inscrit dans une volonté profonde de transformer des vies et de soutenir chaque 
+                croyant dans son cheminement spirituel et social. Nous sommes ravis de partager 
+                ce voyage avec vous.
+              </p>
+
+              <div className="d-flex align-items-center mt-5">
+                <div className="border-start border-primary border-4 ps-3">
+                  <h5 className="fw-bold mb-0">Nom du Président</h5>
+                  <p className="text-muted mb-0">Président Fondateur de la CBT</p>
                 </div>
+                {/* Optionnel: Signature manuscrite si on a une image */}
+                {/* <img src={signature} alt="Signature" className="ms-4" style={{height: '50px'}} /> */}
+              </div>
+              
+              <div className="mt-4">
+                <a href="/biographie" className="btn btn-primary btn-lg rounded-pill px-4 shadow-sm">
+                  Lire la biographie complète
+                </a>
               </div>
             </div>
 
           </div>
         </section>
 
+
+        {/* =================  SECTION NOS ACTIVITÉS ================= */}
+        <section className="bg-light py-5">
+  <div className="container">
+    <h2 className="text-center fw-bold mb-5">Nos Activités</h2>
+
+    <div className="row g-4">
+
+      <div className="col-md-4">
+        <div className="card border-0 shadow-sm rounded-4 h-100">
+          <img src={ded3} className="card-img-top" style={{height:"250px", objectFit:"cover"}} />
+          <div className="card-body">
+            <h5 className="fw-bold">Formations Bibliques</h5>
+            <p className="text-muted small">
+              Sessions d’enseignement pour approfondir la parole de Dieu.
+            </p>
+          </div>
+        </div>
       </div>
+
+      <div className="col-md-4">
+        <div className="card border-0 shadow-sm rounded-4 h-100">
+          <img src={ded4} className="card-img-top" style={{height:"250px", objectFit:"cover"}} />
+          <div className="card-body">
+            <h5 className="fw-bold">Actions Sociales</h5>
+            <p className="text-muted small">
+              Soutien aux familles et projets humanitaires.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-md-4">
+        <div className="card border-0 shadow-sm rounded-4 h-100">
+          <img src={ded5} className="card-img-top" style={{height:"250px", objectFit:"cover"}} />
+          <div className="card-body">
+            <h5 className="fw-bold">Événements Spirituels</h5>
+            <p className="text-muted small">
+              Conférences, cultes spéciaux et rassemblements.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+        {/* ================= SECTION CHIFFRES CLÉS================= */}
+        <section className="container py-5 text-center">
+  <div className="row">
+    <div className="col-md-3">
+      <h2 className="fw-bold text-primary">20+</h2>
+      <p>Années d’impact</p>
+    </div>
+    <div className="col-md-3">
+      <h2 className="fw-bold text-primary">5 000+</h2>
+      <p>Membres accompagnés</p>
+    </div>
+    <div className="col-md-3">
+      <h2 className="fw-bold text-primary">150+</h2>
+      <p>Événements organisés</p>
+    </div>
+    <div className="col-md-3">
+      <h2 className="fw-bold text-primary">12+</h2>
+      <p>Programmes actifs</p>
+    </div>
+  </div>
+</section>
+
+        {/* ================= SECTION APPEL AU DON ================= */}
+        <section className="bg-primary text-white text-center py-5">
+  <div className="container">
+    <h2 className="fw-bold mb-3">
+      Soutenez notre mission
+    </h2>
+    <p className="mb-4">
+      Votre contribution nous aide à étendre notre impact 
+      et soutenir davantage de familles.
+    </p>
+    <a href="/don" className="btn btn-light btn-lg rounded-pill px-5">
+      Faire un don maintenant
+    </a>
+  </div>
+</section>
+      </>
     );
   }
 }
