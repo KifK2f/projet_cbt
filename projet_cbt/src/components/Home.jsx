@@ -2,28 +2,26 @@ import React from 'react'
 import ded1 from "../assets/images/dedicace-temple-Diguéngué/dedicace-Diguéngue_1.jpeg";
 import ded2 from "../assets/images/dedicace-temple-Diguéngué/dedicace-Diguéngue_2.jpeg";
 import ded3 from "../assets/images/dedicace-temple-Diguéngué/dedicace-Diguéngue_3.jpeg";
+import ded4 from "../assets/images/dedicace-temple-Diguéngué/dedicace-Diguéngue_4.jpeg";
+import ded5 from "../assets/images/dedicace-temple-Diguéngué/dedicace-Diguéngue_5.jpeg";
 
 class Home extends React.Component {
 
-  constructor(){
-    super()
-    this.state = {}
-  }
-
   render() {
     return (
-      <>
-           <div>
+      <div>
 
-            <div id="homeCarousel" className="carousel slide" data-bs-ride="carousel">
-              <div className="carousel-indicators">
-                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-              <div className="carousel-inner">
+        <div id="homeCarousel" className="carousel slide" data-bs-ride="carousel">
+          
+          <div className="carousel-indicators">
+            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" className="active"></button>
+            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2"></button>
+          </div>
 
-              <div className="carousel-item active">
+          <div className="carousel-inner">
+
+            <div className="carousel-item active">
               <img src={ded1} className="d-block w-100" alt="Slide 1" style={{height: '32rem', objectFit: 'cover'}} />
               <div className="container">
                 <div className="carousel-caption text-start">
@@ -56,79 +54,136 @@ class Home extends React.Component {
               </div>
             </div>
 
-              </div>
-              <button className="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Previous</span>
-              </button>
-              <button className="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Next</span>
-              </button>
+          </div>
+
+          <button className="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+            <span className="carousel-control-prev-icon"></span>
+          </button>
+
+          <button className="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+            <span className="carousel-control-next-icon"></span>
+          </button>
+
+        </div>
+
+        {/* ================= ABOUT SECTION ================= */}
+        <section className="container mt-5">
+          <div className="row align-items-center">
+            <div className="col-md-6">
+              <h2 className="fw-bold">
+                About Our Institution
+              </h2>
+              <p className="text-muted">
+                Since 2021, our institution has been a place of faith, unity and growth.
+                We guide believers and support communities with impactful programs.
+              </p>
             </div>
 
-            <div className="container marketing mt-5">
+            <div className="col-md-6">
+              <div className="row g-3">
 
-              <div className="row text-center">
-                <div className="col-lg-4 mb-4">
-                  <div className="bg-secondary rounded-circle d-inline-block" style={{width: '140px', height: '140px'}}></div>
-                  <h2>Rubrique 1</h2>
-                  <p>Accès rapide aux principales rubriques de notre institution.</p>
-                  <p><a className="btn btn-secondary" href="/">Voir détails &raquo;</a></p>
+                <div className="col-6">
+                  <div className="card bg-dark text-white rounded-4 p-4 border-0 h-100">
+                    <h5>Professional Guidance</h5>
+                    <p className="small">
+                      Structured spiritual mentoring and leadership.
+                    </p>
+                  </div>
                 </div>
-                <div className="col-lg-4 mb-4">
-                  <div className="bg-secondary rounded-circle d-inline-block" style={{width: '140px', height: '140px'}}></div>
-                  <h2>Rubrique 2</h2>
-                  <p>Explorez nos missions, valeurs et histoire.</p>
-                  <p><a className="btn btn-secondary" href="/mission-valeurs">Voir détails &raquo;</a></p>
+
+                <div className="col-6">
+                  <div className="card bg-primary text-white rounded-4 p-4 border-0 h-100">
+                    <h5>Community Programs</h5>
+                    <p className="small">
+                      Events and outreach activities for everyone.
+                    </p>
+                  </div>
                 </div>
-                <div className="col-lg-4 mb-4">
-                  <div className="bg-secondary rounded-circle d-inline-block" style={{width: '140px', height: '140px'}}></div>
-                  <h2>Rubrique 3</h2>
-                  <p>Découvrez nos églises, œuvres et événements à venir.</p>
-                  <p><a className="btn btn-secondary" href="/evenements">Voir détails &raquo;</a></p>
-                </div>
+
               </div>
-
-              <hr className="my-5"/>
-
-              <div className="row featurette mb-5">
-                <div className="col-md-7">
-                  <h2 className="featurette-heading">Mission et Vision <span className="text-muted">De notre institution</span></h2>
-                  <p className="lead">Découvrez l'essence de notre engagement et nos objectifs pour la communauté.</p>
-                </div>
-                <div className="col-md-5">
-                  <div className="bg-light d-block mx-auto" style={{width: '500px', height: '500px'}}></div>
-                </div>
-              </div>
-
-              <hr className="my-5"/>
-
-              <div className="row featurette mb-5">
-                <div className="col-md-7 order-md-2">
-                  <h2 className="featurette-heading">Actualités et événements <span className="text-muted">Restez informés</span></h2>
-                  <p className="lead">Toutes les informations importantes sur nos activités et nos événements récents.</p>
-                </div>
-                <div className="col-md-5 order-md-1">
-                  <div className="bg-light d-block mx-auto" style={{width: '500px', height: '500px'}}></div>
-                </div>
-              </div>
-
-              <hr className="my-5"/>
-
-              <div className="row featurette mb-5">
-                <div className="col-md-7">
-                  <h2 className="featurette-heading">Faire un don <span className="text-muted">Soutenez notre cause</span></h2>
-                  <p className="lead">Contribuez à nos projets et initiatives pour la communauté.</p>
-                </div>
-                <div className="col-md-5">
-                  <div className="bg-light d-block mx-auto" style={{width: '500px', height: '500px'}}></div>
-                </div>
-              </div>
-
             </div>
           </div>
-      </>    
+        </section>
+
+        {/* ================= STATS SECTION ================= */}
+        <section className="container mt-5 text-center">
+          <h4 className="mb-4">A few facts in numbers</h4>
+
+          <div className="row">
+            <div className="col-md-3">
+              <h2 className="fw-bold">12 000+</h2>
+              <p className="text-muted">Hours of service</p>
+            </div>
+
+            <div className="col-md-3">
+              <h2 className="fw-bold">89%</h2>
+              <p className="text-muted">Member retention</p>
+            </div>
+
+            <div className="col-md-3">
+              <h2 className="fw-bold">1,200+</h2>
+              <p className="text-muted">Active members</p>
+            </div>
+
+            <div className="col-md-3">
+              <h2 className="fw-bold">125+</h2>
+              <p className="text-muted">Annual events</p>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= SERVICES SECTION ================= */}
+        <section className="container mt-5 mb-5">
+          <div className="row align-items-center">
+
+            <div className="col-md-4">
+              <h3 className="fw-bold">Our Services</h3>
+              <p className="text-muted">
+                Explore our programs, training, events and community services.
+              </p>
+              <a href="/services" className="btn btn-outline-dark rounded-pill">
+                Explore More
+              </a>
+            </div>
+
+            <div className="col-md-4">
+              <div className="card border-0 rounded-4 overflow-hidden shadow-sm">
+                <img
+                  src={ded4}
+                  className="w-100"
+                  alt="Service 1"
+                  style={{ height: "250px", objectFit: "cover" }}
+                />
+                <div className="card-body">
+                  <h5>Training Programs</h5>
+                  <p className="small text-muted">
+                    Programs designed for all ages and abilities.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col-md-4">
+              <div className="card border-0 rounded-4 overflow-hidden shadow-sm">
+                <img
+                  src={ded5}
+                  className="w-100"
+                  alt="Service 2"
+                  style={{ height: "250px", objectFit: "cover" }}
+                />
+                <div className="card-body">
+                  <h5>Events & Activities</h5>
+                  <p className="small text-muted">
+                    Grow spiritually through impactful gatherings.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
     );
   }
 }
