@@ -2,6 +2,7 @@ import React from 'react'
 import { Route, Routes } from "react-router-dom"
 import Home from './Home'
 import MotPresident from './MotPresident'
+import PageNotFound from './PageNotFound'
 
 // Composant générique pour les pages
 const Page = ({ title, children }) => (
@@ -20,6 +21,10 @@ class AppRouter extends React.Component {
   render() {
     return (
       <Routes>
+        {/* Pour les url erroné on affichera une page */}
+        <Route path="*" element={<PageNotFound/>} />
+
+
         {/* Page d'accueil */}
         <Route path="/" element={<Home/>} />
 

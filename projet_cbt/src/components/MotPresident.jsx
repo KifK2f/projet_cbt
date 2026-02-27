@@ -11,9 +11,6 @@ class MotPresident extends React.Component {
       <div className="hero-section text-center text-white d-flex align-items-center">
         <div className="container">
           <h1 className="display-4 fw-bold">Mot du Président</h1>
-          <p className="lead mt-3">
-            Une vision, une mission, un engagement pour les peuples du Togo
-          </p>
         </div>
       </div>
 

@@ -1,11 +1,6 @@
 import { useState } from 'react'
 import './App.css'
 
-//Les imports pour Bootstrap
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
-import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-
-
 import Navbar from './components/Navbar'
 import { BrowserRouter, Route, Link, Routes } from "react-router-dom"
 import AppRouter from './components/AppRouter'
@@ -21,9 +16,9 @@ function App() {
 
       <BrowserRouter>
           <Navbar />
-          <div className="content-wrapper">
+          <main className="content-wrapper">
             <AppRouter />
-          </div>
+          </main>
           <Footer />
       </BrowserRouter>
     </>
