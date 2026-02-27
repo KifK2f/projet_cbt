@@ -8,7 +8,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 class Footer extends React.Component {
   render() {
     return (
-        <footer className="text-dark bg-light pt-5 pb-4 mt-5">
+        <footer className="text-dark bg-light pb-4">
         <div className="container-fluid px-5">
           <div className="row gy-4">
 
