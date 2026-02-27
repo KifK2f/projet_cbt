@@ -73,7 +73,7 @@ class Navbar extends React.Component {
               </li>
 
               {/* RESSOURCES */}
-              <li className="nav-item dropdown">
+              {/* <li className="nav-item dropdown">
                 <a className="nav-link nav-custom" href="#" data-bs-toggle="dropdown">
                   RESSOURCES
                 </a>
@@ -82,10 +82,10 @@ class Navbar extends React.Component {
                   <li><Link className="dropdown-item" to="/telechargement">Téléchargements</Link></li>
                   <li><Link className="dropdown-item" to="/liens-utiles">Liens utiles</Link></li>
                 </ul>
-              </li>
+              </li> */}
 
               {/* ESPACE MEMBRE */}
-              <li className="nav-item dropdown">
+              {/* <li className="nav-item dropdown">
                 <a className="nav-link nav-custom" href="#" data-bs-toggle="dropdown">
                   ESPACE MEMBRE
                 </a>
@@ -96,10 +96,10 @@ class Navbar extends React.Component {
                   <li><Link className="dropdown-item" to="/forum">Forum de discussion</Link></li>
                   <li><Link className="dropdown-item" to="/calendrier">Calendrier interne</Link></li>
                 </ul>
-              </li>
+              </li> */}
 
               {/* S'ENGAGER */}
-              <li className="nav-item dropdown">
+              {/* <li className="nav-item dropdown">
                 <a className="nav-link nav-custom" href="#" data-bs-toggle="dropdown">
                   S'ENGAGER
                 </a>
@@ -109,7 +109,7 @@ class Navbar extends React.Component {
                   <li><Link className="dropdown-item" to="/partenaire">Devenir partenaire</Link></li>
                   <li><Link className="dropdown-item" to="/priere">Soumettre une demande de prière</Link></li>
                 </ul>
-              </li>
+              </li> */}
 
               {/* CONTACT */}
               <li className="nav-item">
