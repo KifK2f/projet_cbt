@@ -54,7 +54,8 @@ nav {
 
 .nav-custom:hover,
 .dropdown-item:hover {
-  color: #6e3d1d;
+  color: #6e3d1d !important;
+  font-weight: 500;
 }
 
 /* DROPDOWN */
@@ -65,7 +66,7 @@ nav {
   padding: 10px 0;
 }
 
-.dropdown-item {
+/* .dropdown-item {
   padding: 10px 20px;
   transition: all 0.2s ease;
   color: #4b9cde;
@@ -74,6 +75,50 @@ nav {
 .dropdown-item:hover {
   background-color: white;
   color: #6e3d1d;
+} */
+
+/* --- SECTION DROPDOWN ITEM CORRIGÉE --- */
+
+.dropdown-item {
+  padding: 8px 15px; /* Ajuste l'espacement vertical */
+  color: #4b9cde !important;
+  transition: all 0.2s ease;
+  
+  /* SOLUTION AU PROBLÈME DE LARGEUR : */
+  display: table;      /* Force l'élément à ne prendre que la largeur de son texte */
+  width: auto;         /* Annule la largeur de 100% par défaut */
+  margin-left: 10px;   /* Ajoute un peu d'espace par rapport au bord gauche */
+}
+
+/* On réinitialise l'animation pour qu'elle se base sur la largeur du texte */
+.dropdown-item::before,
+.dropdown-item::after {
+  content: "";
+  position: absolute;
+  background-color: #4b9cde;
+  width: 0%;
+  height: 3px;
+  bottom: 0;
+  transition: width 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.dropdown-item::before {
+  left: 0;
+}
+
+.dropdown-item::after {
+  right: 0;
+}
+
+/* Animation au survol : S'arrêtera pile à la fin du texte */
+.dropdown-item:hover::before,
+.dropdown-item:hover::after {
+  width: 50%; /* 50% gauche + 50% droite = 100% de la largeur du texte */
+}
+
+.dropdown-item:hover {
+  background-color: transparent !important; /* Évite le bloc gris moche au survol */
+  color: #6e3d1d !important;
 }
 
 /* BOUTON DON */
