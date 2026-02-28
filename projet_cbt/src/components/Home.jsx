@@ -59,7 +59,7 @@ class Home extends React.Component {
                 <div className="carousel-caption text-start">
                   <h1>Présentation institutionnelle</h1>
                   <p>Découvrez notre mission et notre vision.</p>
-                  <p><a className="btn btn-lg" style={{ backgroundColor: '#4b9cde'}} href="/don">Faire un don</a></p>
+                  <p><a className="btn btn-lg" style={{ backgroundColor: '#6ccff6'}} href="/don">Faire un don</a></p>
                 </div>
               </div>
             </div>
@@ -70,7 +70,7 @@ class Home extends React.Component {
                 <div className="carousel-caption">
                   <h1>Actualités à la une</h1>
                   <p>Restez informé des dernières nouvelles de la CBT.</p>
-                  <p><a className="btn btn-lg" style={{ backgroundColor: '#4b9cde'}} href="/actualites">Voir actualités</a></p>
+                  <p><a className="btn btn-lg" style={{ backgroundColor: '#6ccff6'}} href="/actualites">Voir actualités</a></p>
                 </div>
               </div>
             </div>
@@ -81,7 +81,7 @@ class Home extends React.Component {
                 <div className="carousel-caption text-end">
                   <h1>Prochains événements</h1>
                   <p>Ne manquez pas nos activités et rencontres à venir.</p>
-                  <p><a className="btn btn-lg" style={{ backgroundColor: '#4b9cde'}} href="/evenements">Voir événements</a></p>
+                  <p><a className="btn btn-lg" style={{ backgroundColor: '#6ccff6'}} href="/evenements">Voir événements</a></p>
                 </div>
               </div>
             </div>
@@ -156,7 +156,7 @@ class Home extends React.Component {
 
             {/* Colonne Texte */}
             <div className="col-md-7">
-              <h6 className="fw-bold text-uppercase mb-2" style={{ color: '#4b9cde'}}>Mot de Bienvenue</h6>
+              <h6 className="fw-bold text-uppercase mb-2" style={{ color: '#6ccff6'}}>Mot de Bienvenue</h6>
               <h2 className="display-5 fw-bold mb-4">Gagner les peuples pour Christ et perfectionner les saints</h2>
               
               <div className="position-relative">
@@ -181,6 +181,7 @@ class Home extends React.Component {
                 <a
                   href="/mot-president"
                   className="btn btn-lg rounded-pill px-4 shadow-sm president-btn"
+                  style={{ backgroundColor: '#6ccff6', color: 'white' }}
                 >
                   Lire le mot du président au Complet
                 </a>
@@ -242,26 +243,26 @@ class Home extends React.Component {
         <section className="container py-5 text-center">
   <div className="row">
     <div className="col-md-3">
-      <h2 className="fw-bold" style={{ color: '#4b9cde'}}>20+</h2>
+      <h2 className="fw-bold" style={{ color: '#6ccff6'}}>20+</h2>
       <p>Années d’impact</p>
     </div>
     <div className="col-md-3">
-      <h2 className="fw-bold" style={{ color: '#4b9cde'}}>5 000+</h2>
+      <h2 className="fw-bold" style={{ color: '#6ccff6'}}>5 000+</h2>
       <p>Membres accompagnés</p>
     </div>
     <div className="col-md-3">
-      <h2 className="fw-bold" style={{ color: '#4b9cde'}}>150+</h2>
+      <h2 className="fw-bold" style={{ color: '#6ccff6'}}>150+</h2>
       <p>Événements organisés</p>
     </div>
     <div className="col-md-3">
-      <h2 className="fw-bold" style={{ color: '#4b9cde'}}>12+</h2>
+      <h2 className="fw-bold" style={{ color: '#6ccff6'}}>12+</h2>
       <p>Programmes actifs</p>
     </div>
   </div>
 </section>
 
         {/* ================= SECTION APPEL AU DON ================= */}
-        <section className="text-white text-center py-5" style={{ backgroundColor: '#4b9cde'}}>
+        <section className="text-white text-center py-5" style={{ backgroundColor: '#6ccff6'}}>
   <div className="container">
     <h2 className="fw-bold mb-3">
       Soutenez notre mission

@@ -4,6 +4,8 @@ import Home from './Home'
 import MotPresident from './MotPresident'
 import PageNotFound from './PageNotFound'
 import NotreHistoire from './NotreHistoire'
+import OrganisationCBT from './OrganisationCBT'
+
 
 // Composant générique pour les pages
 const Page = ({ title, children }) => (
@@ -33,7 +35,7 @@ class AppRouter extends React.Component {
         <Route path="/mot-president" element={<MotPresident/>} />
         <Route path="/notre-histoire" element={<NotreHistoire />} />
         <Route path="/mission-valeurs" element={<Page title="Mission et Valeurs" />} />
-        <Route path="/organisation-gouvernance" element={<Page title="Organisation et Gouvernance" />} />
+        <Route path="/organisation-gouvernance" element={<OrganisationCBT/>} />
         <Route path="/textes-fondateurs" element={<Page title="Textes fondateurs" />} />
 
         {/* Actualités et médias */}

@@ -21,22 +21,22 @@ class Footer extends React.Component {
               </p>
 
               <div className="d-flex align-items-start mb-2">
-                <LocationOnIcon className="me-2" style={{ color: '#4b9cde'}}/>
+                <LocationOnIcon className="me-2" style={{ color: '#6ccff6'}}/>
                 <small>Siège : ..., ...</small>
               </div>
 
               <div className="d-flex align-items-start mb-2">
-                <PhoneIcon className="me-2" style={{ color: '#4b9cde'}} />
+                <PhoneIcon className="me-2" style={{ color: '#6ccff6'}} />
                 <small>(+228) XX XX XX XX / (+228) XX XX XX XX</small>
               </div>
 
               <div className="d-flex align-items-start mb-2">
-                <EmailIcon className="me-2" style={{ color: '#4b9cde'}} />
+                <EmailIcon className="me-2" style={{ color: '#6ccff6'}} />
                 <small>....@....</small>
               </div>
 
               <div className="d-flex align-items-start">
-                <LanguageIcon className="me-2" style={{ color: '#4b9cde'}} />
+                <LanguageIcon className="me-2" style={{ color: '#6ccff6'}} />
                 <small>www......</small>
               </div>
             </div>
@@ -70,7 +70,7 @@ class Footer extends React.Component {
                 Soutenez nos actions missionnaires et sociales.
               </p>
 
-              <a href="/don" className="btn w-100 mb-3 fw-bold text-white" style={{ backgroundColor: '#4b9cde'}}>
+              <a href="/don" className="btn w-100 mb-3 fw-bold text-white" style={{ backgroundColor: '#6ccff6'}}>
                 <FavoriteIcon className="me-2" style={{ color: 'white'}} />
                 Faire un don
               </a>
@@ -81,7 +81,7 @@ class Footer extends React.Component {
                   className="form-control"
                   placeholder="Votre email"
                 />
-                <button className="btn fw-bold text-white" style={{ backgroundColor: '#4b9cde'}} >
+                <button className="btn fw-bold text-white" style={{ backgroundColor: '#6ccff6'}} >
                   S'abonner
                 </button>
               </div>

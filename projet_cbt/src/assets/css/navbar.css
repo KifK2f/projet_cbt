@@ -1,5 +1,5 @@
 nav {
-  background-color: #4b9cde;
+  background-color: #6ccff6;
 }
 
 /* NAVBAR GENERAL */
@@ -66,7 +66,7 @@ nav {
 .dropdown-item {
   padding: 10px 20px;
   transition: all 0.2s ease;
-  color: #4b9cde;
+  color: #6ccff6;
 }
 
 .dropdown-item:hover {
