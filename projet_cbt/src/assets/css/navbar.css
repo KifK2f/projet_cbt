@@ -1,5 +1,6 @@
 nav {
-  background-color: #6ccff6;
+  /* background-color: #4b9cde; */
+  background-color: white;
 }
 
 /* NAVBAR GENERAL */
@@ -26,11 +27,12 @@ nav {
 .dropdown-item::after {
   content: "";
   position: absolute;
-  background-color: white;
+  /* background-color: white; */
+  background-color: #4b9cde;
   width: 0%;
-  height: 2px;
+  height: 3px;
   bottom: 0;
-  transition: width 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: width 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .nav-custom::before,
@@ -66,7 +68,7 @@ nav {
 .dropdown-item {
   padding: 10px 20px;
   transition: all 0.2s ease;
-  color: #6ccff6;
+  color: #4b9cde;
 }
 
 .dropdown-item:hover {
@@ -105,10 +107,9 @@ nav {
 }
 
 .logo {
-  width: 60px;
-  height: 60px;
+  width: 100%;
+  height: 80px;
   object-fit: cover;
-  border-radius: 10%;
 }
 
 .nav-link {

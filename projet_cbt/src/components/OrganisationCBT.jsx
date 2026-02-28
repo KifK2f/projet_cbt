@@ -1,5 +1,5 @@
 import React from 'react';
-import "../assets/css/notre-histoire.css";
+import "../assets/css/organisation-cbt.css";
 
 const MemberCard = ({ name, role, phone, type, isMain }) => (
   <div className={`col-6 col-md-4 ${isMain ? 'col-lg-12 mb-4' : 'col-lg-3 mb-4'}`}>

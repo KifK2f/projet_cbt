@@ -9,7 +9,7 @@ class Navbar extends React.Component {
       <nav className="navbar navbar-expand-lg fixed-top shadow-sm navbar-custom">
           <div className="container-fluid px-0 mx-3">
           {/* Logo */}
-          <Link className="navbar-brand text-white" to="/">
+          <Link to="/">
             <img src={logo} alt="Logo CBT" className="logo" />
           </Link>
 
