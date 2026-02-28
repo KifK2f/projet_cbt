@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom"
 import Home from './Home'
 import MotPresident from './MotPresident'
 import PageNotFound from './PageNotFound'
+import NotreHistoire from './NotreHistoire'
 
 // Composant générique pour les pages
 const Page = ({ title, children }) => (
@@ -30,7 +31,7 @@ class AppRouter extends React.Component {
 
         {/* Découvrir la CBT */}
         <Route path="/mot-president" element={<MotPresident/>} />
-        <Route path="/notre-histoire" element={<Page title="Notre Histoire" />} />
+        <Route path="/notre-histoire" element={<NotreHistoire />} />
         <Route path="/mission-valeurs" element={<Page title="Mission et Valeurs" />} />
         <Route path="/organisation-gouvernance" element={<Page title="Organisation et Gouvernance" />} />
         <Route path="/textes-fondateurs" element={<Page title="Textes fondateurs" />} />
