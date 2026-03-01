@@ -2,22 +2,65 @@ import React, { useEffect, useState } from 'react';
 import "../assets/css/organisation-cbt.css";
 import OrganisationCBTService from "../service/OrganisationCBTService";
 
-const MemberCard = ({ name, role, phone, type, is_main, url_image }) => (
-  <div className={`col-6 col-md-4 ${is_main ? 'col-lg-12 mb-4' : 'col-lg-3 mb-4'}`}>
+// const MemberCard = ({ name, role, phone, type, is_main, url_image }) => (
+//   <div className={`col-6 col-md-4 ${is_main ? 'col-lg-12 mb-4' : 'col-lg-3 mb-4'}`}>
+//     <div className="text-center">
+//       <div className={`photo-frame ${type === 'gold' ? 'frame-gold' : 'frame-blue'}`}>
+//         <img
+//           src={`http://localhost:8000/storage/organisationCBT/${url_image}`}
+//           alt={name}
+//           className="img-fluid"
+//         />
+//       </div>
+
+//       <div className="info-box mx-auto" style={{ maxWidth: '220px' }}>
+//         <p className="member-name">{name}</p>
+//         <p className="member-role">{role}</p>
+//         <p className="member-phone">Tél : {phone}</p>
+//       </div>
+//     </div>
+//   </div>
+// );
+
+const MemberCard = ({
+  name,
+  role,
+  phone,
+  type,
+  is_main,
+  url_image
+}) => (
+  <div
+    className={`
+      col-6 col-md-4 
+      ${is_main ? 'col-lg-12 mb-5 main-member' : 'col-lg-3 mb-4'}
+    `}
+  >
     <div className="text-center">
-      <div className={`photo-frame ${type === 'gold' ? 'frame-gold' : 'frame-blue'}`}>
+
+      <div
+        className={`
+          photo-frame 
+          ${type === 'gold' ? 'frame-gold' : 'frame-blue'}
+          ${is_main ? 'frame-main' : ''}
+        `}
+      >
         <img
           src={`http://localhost:8000/storage/organisationCBT/${url_image}`}
           alt={name}
-          className="img-fluid"
+          className={`img-fluid ${is_main ? 'img-main' : ''}`}
         />
       </div>
 
-      <div className="info-box mx-auto" style={{ maxWidth: '220px' }}>
+      <div
+        className={`info-box mx-auto ${is_main ? 'info-main' : ''}`}
+        style={{ maxWidth: is_main ? '300px' : '220px' }}
+      >
         <p className="member-name">{name}</p>
         <p className="member-role">{role}</p>
         <p className="member-phone">Tél : {phone}</p>
       </div>
+
     </div>
   </div>
 );

@@ -64,3 +64,42 @@
 
 /* Espacements spécifiques */
 .section-wrapper { margin-bottom: 80px; }
+
+
+/* ========================= */
+/* PRESIDENT PERSONNALISÉ   */
+/* ========================= */
+
+.main-member {
+    animation: fadeInMain 0.8s ease-in-out;
+}
+
+/* Cadre spécial président */
+.frame-main {
+    width: 300px;
+    height: auto;
+    transform: scale(1.05);
+}
+
+/* Image président */
+.img-main {
+    object-fit: cover;
+}
+
+/* Bloc info président */
+.info-main {
+    background: linear-gradient(to bottom, #ffffff, #f8f8f8);
+    font-size: 1rem;
+}
+
+/* Animation douce */
+@keyframes fadeInMain {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
