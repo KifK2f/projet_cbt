@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../assets/css/notre-histoire.css";
-import HistoireSectionService from "../service/HistoireSectionService"; // Assure-toi que ce service est créé
+import HistoireSectionService from "../service/HistoireSectionService";
 
 const NotreHistoire = () => {
   const [sections, setSections] = useState([]);
