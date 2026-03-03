@@ -36,7 +36,7 @@ class AppRouter extends React.Component {
         <Route path="/notre-histoire" element={<NotreHistoire />} />
         <Route path="/mission-valeurs" element={<Page title="Mission et Valeurs" />} />
         <Route path="/organisation-gouvernance" element={<OrganisationCBT/>} />
-        <Route path="/textes-fondateurs" element={<Page title="Textes fondateurs" />} />
+        <Route path="/confession-foi" element={<Page title="Confession-foi" />} />
 
         {/* Actualités et médias */}
         <Route path="/actualites" element={<Page title="Actualités" />} />
@@ -48,7 +48,7 @@ class AppRouter extends React.Component {
         {/* Nos églises et œuvres */}
         <Route path="/carte-eglises" element={<Page title="Carte interactive des églises" />} />
         <Route path="/annuaire-region" element={<Page title="Annuaire par région" />} />
-        <Route path="/departements" element={<Page title="Départements" />} />
+        <Route path="/zones" element={<Page title="Zones" />} />
         <Route path="/oeuvres-missions" element={<Page title="Œuvres sociales et missions" />} />
 
         {/* Ressources */}

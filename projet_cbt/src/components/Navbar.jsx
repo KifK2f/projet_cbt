@@ -41,7 +41,7 @@ class Navbar extends React.Component {
                   <li><Link className="dropdown-item" to="/notre-histoire">Notre Histoire</Link></li>
                   <li><Link className="dropdown-item" to="/mission-valeurs">Mission et Valeurs</Link></li>
                   <li><Link className="dropdown-item" to="/organisation-gouvernance">Organisation et Gouvernance</Link></li>
-                  <li><Link className="dropdown-item" to="/textes-fondateurs">Textes fondateurs</Link></li>
+                  <li><Link className="dropdown-item" to="/confession-foi">Confession de foi</Link></li>
                 </ul>
               </li>
 
@@ -67,7 +67,7 @@ class Navbar extends React.Component {
                 <ul className="dropdown-menu dropdown-custom">
                   <li><Link className="dropdown-item" to="/carte-eglises">Carte interactive des églises</Link></li>
                   <li><Link className="dropdown-item" to="/annuaire-region">Annuaire par région</Link></li>
-                  <li><Link className="dropdown-item" to="/departements">Départements</Link></li>
+                  <li><Link className="dropdown-item" to="/zones">Zones</Link></li>
                   <li><Link className="dropdown-item" to="/oeuvres-missions">Œuvres sociales et missions</Link></li>
                 </ul>
               </li>
