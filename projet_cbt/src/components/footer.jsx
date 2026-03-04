@@ -22,22 +22,29 @@ class Footer extends React.Component {
 
               <div className="d-flex align-items-start mb-2">
                 <LocationOnIcon className="me-2" style={{ color: '#4b9cde'}}/>
-                <small>Siège : ..., ...</small>
+                <small>657 Bd de la Kara, Tokoin Doumasséssé, <br />
+                  08 B.P. 80754 Lomé</small>
               </div>
 
               <div className="d-flex align-items-start mb-2">
                 <PhoneIcon className="me-2" style={{ color: '#4b9cde'}} />
-                <small>(+228) XX XX XX XX / (+228) XX XX XX XX</small>
+                <small>
+                  (+228) 22 20 85 56 / 22 21 95 26 <br />
+                  (+228) 91 12 72 92 / 97 68 40 25
+                </small>
               </div>
 
               <div className="d-flex align-items-start mb-2">
                 <EmailIcon className="me-2" style={{ color: '#4b9cde'}} />
-                <small>....@....</small>
+                <small>
+                  convention.togo@gmail.com <br />
+                  cbtogo2@yahoo.fr
+                </small>
               </div>
 
               <div className="d-flex align-items-start">
                 <LanguageIcon className="me-2" style={{ color: '#4b9cde'}} />
-                <small>www......</small>
+                <small>www.conventionbaptistetogo.org</small>   
               </div>
             </div>
 
@@ -45,10 +52,10 @@ class Footer extends React.Component {
             <div className="col-md-2">
               <h6 className="fw-bold mb-3">Découvrir</h6>
               <ul className="list-unstyled small text-dark">
-                <li><a href="/mot-president" className="text-decoration-none text-dark">Mot du Président</a></li>
-                <li><a href="/notre-histoire" className="text-decoration-none text-dark">Notre Histoire</a></li>
-                <li><a href="/mission-valeurs" className="text-decoration-none text-dark">Mission & Valeurs</a></li>
-                <li><a href="/organisation-gouvernance" className="text-decoration-none text-dark">Gouvernance</a></li>
+                <li><a href="/mot-president" className="link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-dark">Mot du Président</a></li>
+                <li><a href="/notre-histoire" className="link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-dark">Notre Histoire</a></li>
+                <li><a href="/mission-valeurs" className="link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-dark">Mission & Valeurs</a></li>
+                <li><a href="/organisation-gouvernance" className="link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-dark">Gouvernance</a></li>
               </ul>
             </div>
 
@@ -56,10 +63,10 @@ class Footer extends React.Component {
             <div className="col-md-2">
               <h6 className="fw-bold mb-3">Ressources</h6>
               <ul className="list-unstyled small">
-                <li><a href="/actualites" className="text-decoration-none text-dark">Actualités</a></li>
-                <li><a href="/bibliotheque" className="text-decoration-none text-dark">Bibliothèque</a></li>
-                <li><a href="/telechargement" className="text-decoration-none text-dark">Téléchargements</a></li>
-                <li><a href="/contact" className="text-decoration-none text-light">Contact</a></li>
+                <li><a href="/actualites" className="link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-dark">Actualités</a></li>
+                <li><a href="/bibliotheque" className="link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-dark">Bibliothèque</a></li>
+                <li><a href="/telechargement" className="link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-dark">Téléchargements</a></li>
+                <li><a href="/contact" className="link-underline link-underline-opacity-0 link-underline-opacity-100-hover text-light">Contact</a></li>
               </ul>
             </div>
 
