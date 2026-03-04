@@ -1,208 +1,262 @@
-/* ===================================== */
-/* CONTAINER GENERAL */
-/* ===================================== */
-
+/* ======================= */
+/* GENERAL CONTAINER */
 .org-container {
     background: linear-gradient(to bottom, #f8f9fa, #eef1f5);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
 }
 
-/* ===================================== */
+/* ======================= */
 /* BANNERS */
-/* ===================================== */
-
 .banner {
     border-radius: 50px;
-    padding: clamp(8px, 1.2vw, 14px) clamp(25px, 4vw, 60px);
+    padding: clamp(8px,1.2vw,14px) clamp(25px,4vw,60px);
     color: white;
     font-weight: 700;
     display: inline-block;
-    margin-bottom: clamp(30px, 5vw, 60px);
+    margin-bottom: clamp(30px,5vw,50px);
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
     text-transform: uppercase;
-    font-size: clamp(0.9rem, 1.3vw, 1.2rem);
+    font-size: clamp(0.9rem,1.3vw,1.2rem);
     letter-spacing: 1px;
-    transition: all 0.3s ease;
 }
+.banner-red { background: linear-gradient(to bottom, #ff0000,#cc0000); border: 2px solid #fff; }
+.banner-blue { background: linear-gradient(to bottom, #0056b3,#003366); border: 2px solid #fff; }
 
-.banner-red { 
-    background: linear-gradient(to bottom, #ff0000, #cc0000); 
-    border: 2px solid #fff; 
-}
-
-.banner-blue { 
-    background: linear-gradient(to bottom, #0056b3, #003366); 
-    border: 2px solid #fff; 
-}
-
-/* ===================================== */
+/* ======================= */
 /* PHOTO FRAME */
-/* ===================================== */
-
 .photo-frame {
-    width: clamp(130px, 12vw, 170px);
-    height: clamp(170px, 15vw, 210px);
+    width: clamp(130px,12vw,170px);
+    height: clamp(170px,15vw,210px);
     margin: 0 auto;
-    border-radius: 50% / 50%;
+    border-radius: 50%;
     overflow: hidden;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #fff;
     transition: all 0.3s ease;
 }
+.photo-frame:hover { transform: translateY(-6px); }
+.frame-gold { border: 5px solid #d4af37; box-shadow:0 0 20px rgba(212,175,55,0.5); }
+.frame-blue { border: 4px solid #0056b3; box-shadow:0 0 15px rgba(0,86,179,0.3); }
+.photo-frame img { width:100%; height:100%; object-fit:cover; }
 
-.photo-frame:hover {
-    transform: translateY(-6px);
-}
-
-.frame-gold { 
-    border: 5px solid #d4af37; 
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); 
-}
-
-.frame-blue { 
-    border: 4px solid #0056b3; 
-    box-shadow: 0 0 15px rgba(0, 86, 179, 0.3);
-}
-
-.photo-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* ===================================== */
+/* ======================= */
 /* INFO BOX */
-/* ===================================== */
-
 .info-box {
     margin-top: -18px;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255,255,255,0.95);
     backdrop-filter: blur(5px);
     border-radius: 12px;
-    padding: clamp(8px, 1vw, 14px);
+    padding: clamp(8px,1vw,14px);
     min-height: 90px;
-    position: relative;
-    z-index: 2;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
 }
 
-.member-name { 
-    font-size: clamp(0.8rem, 1vw, 1rem);
-    font-weight: 700; 
-    color: #000; 
-    margin: 0; 
+.info-main {
+    background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+    border: 2px solid #d4af37; /* Rappel de l'or du cadre */
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2); /* Ombre dorée diffuse */
+    position: relative;
+    z-index: 3;
+    margin-top: -25px; /* Chevauchement plus élégant sur la photo */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.member-role { 
-    font-size: clamp(0.75rem, 0.9vw, 0.9rem);
-    color: #ff0000; 
-    font-weight: 600; 
-    margin: 4px 0; 
+.member-name { font-size: clamp(0.8rem,1vw,1rem); font-weight:700; color:#000; margin:0; }
+.member-role { font-size: clamp(0.75rem,0.9vw,0.9rem); font-weight:600; color:#ff0000; margin:4px 0; }
+.member-phone { font-size: clamp(0.7rem,0.9vw,0.85rem); font-weight:600; color:#333; }
+
+/* ======================= */
+/* INFO BOX - PRÉSIDENT (Sublimée) */
+/* ======================= */
+
+.info-main {
+    /* Éffet Glassmorphism Premium */
+    background: rgba(255, 255, 255, 0.85); /* Fond blanc semi-transparent */
+    backdrop-filter: blur(10px) saturate(180%); /* Flou d'arrière-plan intense */
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    
+    /* Bordure Dorée Travaillée */
+    border: 2px solid transparent;
+    border-image: linear-gradient(135deg, #d4af37 0%, #fff8dc 50%, #b8860b 100%) 1; /* Dégradé doré complexe */
+    
+    border-radius: 0; /* Note: border-image ne fonctionne pas bien avec border-radius. Pour garder l'arrondi, utilisez clip-path ou une ombre */
+    /* Alternative pour garder l'arrondi ET le dégradé (plus complexe) : utilisez background-clip: padding-box, border-box */
+    border-radius: 15px; /* On garde l'arrondi simple pour la compatibilité, mais avec une bordure dorée unie */
+    border: 2px solid #d4af37; 
+
+    padding: 20px;
+    
+    /* Ombre Douce et Profonde */
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.25), /* Ombre dorée */
+                0 5px 15px rgba(0, 0, 0, 0.1);      /* Ombre noire pour le relief */
+    
+    position: relative;
+    z-index: 10; /* S'assure qu'il passe au-dessus de tout */
+    margin-top: -30px; /* Chevauchement élégant sur la photo */
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); /* Transition fluide */
+    
+    /* Empêche le texte de déborder */
+    overflow: hidden;
 }
 
-.member-phone { 
-    font-size: clamp(0.7rem, 0.9vw, 0.85rem);
-    font-weight: 600; 
-    color: #333; 
+/* Effet de Reflet Lumineux au Survol de la carte */
+.main-member:hover .info-main {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.35);
+    background: rgba(255, 255, 255, 0.95);
 }
 
-/* ===================================== */
-/* PRESIDENT DESIGN SPECIAL */
-/* ===================================== */
+/* Ajout d'un pseudo-élément pour un reflet "shimmer" */
+.info-main::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+    transform: rotate(30deg);
+    transition: all 0.8s ease;
+    opacity: 0;
+}
 
-.main-member {
-    animation: fadeInMain 0.8s ease-in-out;
+.main-member:hover .info-main::after {
+    opacity: 1;
+    left: 130%; /* Le reflet traverse la carte */
+}
+
+/* ======================= */
+/* TYPOGRAPHIE PRÉSIDENT */
+/* ======================= */
+
+/* Le Nom : Plus grand, espacé et sombre */
+.info-main .member-name {
+    font-size: clamp(1.1rem, 2vw, 1.3rem); /* Dynamique */
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    letter-spacing: 1.5px; /* Espacement "luxueux" */
+    margin-bottom: 6px;
+    line-height: 1.2;
+}
+
+/* Le Rôle : Italique, rouge officiel, souligné discrètement */
+.info-main .member-role {
+    font-family: 'Georgia', serif; /* Change la police pour un côté plus solennel */
+    font-style: italic;
+    color: #cc0000; /* Rouge vif */
+    font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+    font-weight: 600;
+    margin: 8px 0;
+    display: inline-block; /* Pour que le soulignement ne prenne que la largeur du texte */
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* Soulignement doré sous le rôle */
+.info-main .member-role::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%; /* Centré */
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #d4af37, transparent);
+}
+
+/* Le Téléphone : Plus discret */
+.info-main .member-phone {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #555;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+
+/* ======================= */
+/* PRESIDENT SPECIAL */
+.president-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.president-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .frame-main {
-    width: clamp(220px, 25vw, 320px);
-    height: auto;
+    width: clamp(220px,25vw,320px);
+    height: clamp(240px,28vw,340px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transform: scale(1.05);
 }
 
-.img-main {
-    object-fit: cover;
+.img-main { width: 100%; height: 100%; }
+
+/* ======================= */
+/* SCROLLING */
+.scroll-wrapper {
+    overflow:hidden;
+    position:relative;
+    width:100vw;
+    padding:15px 0;
+    cursor:grab;
 }
-
-.info-main {
-    background: linear-gradient(to bottom, #ffffff, #f3f3f3);
-    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
-    border: 1px solid #e5e5e5;
+.scroll-track {
+    display:flex;
+    width:max-content;
+    gap:30px;
+    animation: scroll 30s linear infinite;
 }
+.scroll-wrapper:hover .scroll-track { animation-play-state:paused; }
+.speed-normal { animation-duration:30s; }
 
-/* ===================================== */
-/* SECTION SPACING */
-/* ===================================== */
+/* ======================= */
+/* EXECUTIF CARDS */
+.executif-card { flex:0 0 200px; }
+.main-member { flex:0 0 320px; animation: fadeInMain 0.8s ease-in-out; }
 
-.section-wrapper {
-    margin-bottom: clamp(50px, 8vw, 100px);
-}
+/* ======================= */
+/* ZONE CARDS */
+.zone-card { min-width:180px; }
 
-/* ===================================== */
-/* RESPONSIVE IMPROVEMENTS */
-/* ===================================== */
-
-@media (max-width: 992px) {
-
-    .frame-main {
-        width: 220px;
-    }
-
-    .info-box {
-        max-width: 200px !important;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .banner {
-        font-size: 0.85rem;
-        padding: 8px 25px;
-    }
-
-    .photo-frame {
-        width: 120px;
-        height: 160px;
-    }
-
-    .info-box {
-        max-width: 180px !important;
-    }
-}
-
-@media (max-width: 480px) {
-
-    .photo-frame {
-        width: 100px;
-        height: 140px;
-    }
-
-    .member-name { font-size: 0.75rem; }
-    .member-role { font-size: 0.7rem; }
-    .member-phone { font-size: 0.7rem; }
-
-    .info-box {
-        padding: 6px;
-        max-width: 160px !important;
-    }
-}
-
-/* ===================================== */
+/* ======================= */
 /* ANIMATION */
-/* ===================================== */
+@keyframes scroll { 0%{transform:translateX(0);} 100%{transform:translateX(-50%);} }
+@keyframes fadeInMain { from{opacity:0;transform:translateY(-20px);} to{opacity:1;transform:translateY(0);} }
 
-@keyframes fadeInMain {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
+/* ======================= */
+/* RESPONSIVE */
+@media (max-width:1200px){ .zone-card{min-width:160px;} }
+@media (max-width:768px){ 
+    .frame-main {
+        width: 180px !important; 
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    .executif-card{flex:0 0 160px;} 
+    .photo-frame{width:120px;height:160px;} 
+    .frame-main{height:200px;}
+    .zone-card{min-width:140px;} 
+}
+@media (max-width:480px){ 
+    .photo-frame{width:100px;height:140px;} 
+    .frame-main{height:160px;}
+    .member-name{font-size:0.75rem;} 
+    .member-role{font-size:0.7rem;} 
+    .member-phone{font-size:0.7rem;} 
+    .zone-card{min-width:120px;} 
 }
