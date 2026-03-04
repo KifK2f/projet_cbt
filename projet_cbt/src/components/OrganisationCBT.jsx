@@ -2,26 +2,6 @@ import React, { useEffect, useState } from 'react';
 import "../assets/css/organisation-cbt.css";
 import OrganisationCBTService from "../service/OrganisationCBTService";
 
-// const MemberCard = ({ name, role, phone, type, is_main, url_image }) => (
-//   <div className={`col-6 col-md-4 ${is_main ? 'col-lg-12 mb-4' : 'col-lg-3 mb-4'}`}>
-//     <div className="text-center">
-//       <div className={`photo-frame ${type === 'gold' ? 'frame-gold' : 'frame-blue'}`}>
-//         <img
-//           src={`http://localhost:8000/storage/organisationCBT/${url_image}`}
-//           alt={name}
-//           className="img-fluid"
-//         />
-//       </div>
-
-//       <div className="info-box mx-auto" style={{ maxWidth: '220px' }}>
-//         <p className="member-name">{name}</p>
-//         <p className="member-role">{role}</p>
-//         <p className="member-phone">Tél : {phone}</p>
-//       </div>
-//     </div>
-//   </div>
-// );
-
 const MemberCard = ({
   name,
   role,
@@ -53,8 +33,8 @@ const MemberCard = ({
       </div>
 
       <div
-        className={`info-box mx-auto ${is_main ? 'info-main' : ''}`}
-        style={{ maxWidth: is_main ? '300px' : '220px' }}
+        className={`info-box mx-auto ${is_main ? 'info-main mt-3' : 'mt-1'}`}
+        style={{ maxWidth: is_main ? '250px' : '200px' }}
       >
         <p className="member-name">{name}</p>
         <p className="member-role">{role}</p>
@@ -85,7 +65,7 @@ const OrganisationCBT = () => {
   }, []);
 
   return (
-    <div className="org-container py-5 text-center">
+    <div className="org-container py-3 text-center">
 
       {/* SECTION 1 */}
       <div className="section-wrapper container">

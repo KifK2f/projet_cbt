@@ -1,29 +1,48 @@
-/* Configuration Générale */
+/* ===================================== */
+/* CONTAINER GENERAL */
+/* ===================================== */
+
 .org-container {
-    background-color: #f8f9fa;
+    background: linear-gradient(to bottom, #f8f9fa, #eef1f5);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
 }
 
-/* Titres de Sections (Bannières) */
+/* ===================================== */
+/* BANNERS */
+/* ===================================== */
+
 .banner {
     border-radius: 50px;
-    padding: 10px 40px;
+    padding: clamp(8px, 1.2vw, 14px) clamp(25px, 4vw, 60px);
     color: white;
-    font-weight: bold;
+    font-weight: 700;
     display: inline-block;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: clamp(30px, 5vw, 60px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: clamp(0.9rem, 1.3vw, 1.2rem);
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
 
-.banner-red { background: linear-gradient(to bottom, #ff0000, #cc0000); border: 2px solid #fff; }
-.banner-blue { background: linear-gradient(to bottom, #0056b3, #003366); border: 2px solid #fff; }
+.banner-red { 
+    background: linear-gradient(to bottom, #ff0000, #cc0000); 
+    border: 2px solid #fff; 
+}
 
-/* Cadres Photos (Le Style Ovale) */
+.banner-blue { 
+    background: linear-gradient(to bottom, #0056b3, #003366); 
+    border: 2px solid #fff; 
+}
+
+/* ===================================== */
+/* PHOTO FRAME */
+/* ===================================== */
+
 .photo-frame {
-    width: 160px;
-    height: 200px;
+    width: clamp(130px, 12vw, 170px);
+    height: clamp(170px, 15vw, 210px);
     margin: 0 auto;
     border-radius: 50% / 50%;
     overflow: hidden;
@@ -32,12 +51,22 @@
     align-items: center;
     justify-content: center;
     background: #fff;
+    transition: all 0.3s ease;
 }
 
-/* Bordures dorées pour l'Exécutif */
-.frame-gold { border: 5px solid #d4af37; box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); }
-/* Bordures bleues pour les autres */
-.frame-blue { border: 4px solid #0056b3; }
+.photo-frame:hover {
+    transform: translateY(-6px);
+}
+
+.frame-gold { 
+    border: 5px solid #d4af37; 
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); 
+}
+
+.frame-blue { 
+    border: 4px solid #0056b3; 
+    box-shadow: 0 0 15px rgba(0, 86, 179, 0.3);
+}
 
 .photo-frame img {
     width: 100%;
@@ -45,54 +74,128 @@
     object-fit: cover;
 }
 
-/* Blocs d'informations sous les photos */
+/* ===================================== */
+/* INFO BOX */
+/* ===================================== */
+
 .info-box {
-    margin-top: -15px; /* Chevauchement léger pour le design */
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
+    margin-top: -18px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    padding: clamp(8px, 1vw, 14px);
     min-height: 90px;
     position: relative;
     z-index: 2;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
 }
 
-.member-name { font-size: 0.95rem; font-weight: bold; color: #000; margin: 0; }
-.member-role { font-size: 0.85rem; color: #ff0000; font-weight: bold; margin: 2px 0; }
-.member-phone { font-size: 0.8rem; font-weight: bold; color: #333; }
+.member-name { 
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    font-weight: 700; 
+    color: #000; 
+    margin: 0; 
+}
 
-/* Espacements spécifiques */
-.section-wrapper { margin-bottom: 80px; }
+.member-role { 
+    font-size: clamp(0.75rem, 0.9vw, 0.9rem);
+    color: #ff0000; 
+    font-weight: 600; 
+    margin: 4px 0; 
+}
 
+.member-phone { 
+    font-size: clamp(0.7rem, 0.9vw, 0.85rem);
+    font-weight: 600; 
+    color: #333; 
+}
 
-/* ========================= */
-/* PRESIDENT PERSONNALISÉ   */
-/* ========================= */
+/* ===================================== */
+/* PRESIDENT DESIGN SPECIAL */
+/* ===================================== */
 
 .main-member {
     animation: fadeInMain 0.8s ease-in-out;
 }
 
-/* Cadre spécial président */
 .frame-main {
-    width: 300px;
+    width: clamp(220px, 25vw, 320px);
     height: auto;
     transform: scale(1.05);
 }
 
-/* Image président */
 .img-main {
     object-fit: cover;
 }
 
-/* Bloc info président */
 .info-main {
-    background: linear-gradient(to bottom, #ffffff, #f8f8f8);
-    font-size: 1rem;
+    background: linear-gradient(to bottom, #ffffff, #f3f3f3);
+    font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+    border: 1px solid #e5e5e5;
 }
 
-/* Animation douce */
+/* ===================================== */
+/* SECTION SPACING */
+/* ===================================== */
+
+.section-wrapper {
+    margin-bottom: clamp(50px, 8vw, 100px);
+}
+
+/* ===================================== */
+/* RESPONSIVE IMPROVEMENTS */
+/* ===================================== */
+
+@media (max-width: 992px) {
+
+    .frame-main {
+        width: 220px;
+    }
+
+    .info-box {
+        max-width: 200px !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .banner {
+        font-size: 0.85rem;
+        padding: 8px 25px;
+    }
+
+    .photo-frame {
+        width: 120px;
+        height: 160px;
+    }
+
+    .info-box {
+        max-width: 180px !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .photo-frame {
+        width: 100px;
+        height: 140px;
+    }
+
+    .member-name { font-size: 0.75rem; }
+    .member-role { font-size: 0.7rem; }
+    .member-phone { font-size: 0.7rem; }
+
+    .info-box {
+        padding: 6px;
+        max-width: 160px !important;
+    }
+}
+
+/* ===================================== */
+/* ANIMATION */
+/* ===================================== */
+
 @keyframes fadeInMain {
     from {
         opacity: 0;
