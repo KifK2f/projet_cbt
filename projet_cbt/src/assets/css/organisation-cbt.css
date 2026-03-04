@@ -2,7 +2,6 @@
 /* GENERAL CONTAINER */
 .org-container {
     background: linear-gradient(to bottom, #f8f9fa, #eef1f5);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
 }
 
@@ -53,6 +52,9 @@
     min-height: 90px;
     box-shadow:0 4px 12px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
+    width: 100%; 
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .info-main {
@@ -137,7 +139,7 @@
 
 /* Le Nom : Plus grand, espacé et sombre */
 .info-main .member-name {
-    font-size: clamp(1.1rem, 2vw, 1.3rem); /* Dynamique */
+    font-size: 0.95rem; /* Dynamique */
     font-weight: 800;
     text-transform: uppercase;
     color: #1a1a1a;
@@ -148,7 +150,6 @@
 
 /* Le Rôle : Italique, rouge officiel, souligné discrètement */
 .info-main .member-role {
-    font-family: 'Georgia', serif; /* Change la police pour un côté plus solennel */
     font-style: italic;
     color: #cc0000; /* Rouge vif */
     font-size: clamp(0.9rem, 1.2vw, 1.05rem);
@@ -228,7 +229,8 @@
 
 /* ======================= */
 /* EXECUTIF CARDS */
-.executif-card { flex:0 0 200px; }
+/* .executif-card { flex:0 0 200px; } */
+.executif-card { flex:0 0 }
 .main-member { flex:0 0 320px; animation: fadeInMain 0.8s ease-in-out; }
 
 /* ======================= */
@@ -247,7 +249,7 @@
     .frame-main {
         width: 180px !important; 
     }
-    .executif-card{flex:0 0 160px;} 
+    .executif-card{flex:0 0 200px;} 
     .photo-frame{width:120px;height:160px;} 
     .frame-main{height:200px;}
     .zone-card{min-width:140px;} 

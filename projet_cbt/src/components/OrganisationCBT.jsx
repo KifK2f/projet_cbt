@@ -12,7 +12,7 @@ const MemberCard = ({ name, role, phone, type, is_main, url_image }) => (
           className={is_main ? 'img-main' : ''}
         />
       </div>
-      <div className={`info-box mt-2 ${is_main ? 'info-main mt-3' : ''}`} style={{ maxWidth: is_main ? '300px' : '200px' }}>
+      <div className={`info-box mt-2 ${is_main ? 'info-main mt-3' : ''}`} style={{ width: is_main ? '300px' : '250px' }}>
         <p className="member-name">{name}</p>
         <p className="member-role">{role}</p>
         <p className="member-phone">Tél : {phone}</p>
