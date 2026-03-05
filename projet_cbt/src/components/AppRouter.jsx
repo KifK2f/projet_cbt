@@ -6,6 +6,7 @@ import PageNotFound from './PageNotFound'
 import NotreHistoire from './NotreHistoire'
 import OrganisationCBT from './OrganisationCBT'
 import Evenements from './Evenements'
+import Zones from './Zones'
 
 
 // Composant générique pour les pages
@@ -45,7 +46,7 @@ const AppRouter = () => {
         {/* Nos églises et œuvres */}
         <Route path="/carte-eglises" element={<Page title="Carte interactive des églises" />} />
         <Route path="/annuaire-region" element={<Page title="Annuaire par région" />} />
-        <Route path="/zones" element={<Page title="Zones" />} />
+        <Route path="/zones" element={<Zones/>} />
         <Route path="/oeuvres-missions" element={<Page title="Œuvres sociales et missions" />} />
 
         {/* Ressources */}

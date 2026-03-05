@@ -1,0 +1,18 @@
+.zones-section .table th,
+.zones-section .table td {
+  vertical-align: middle;
+}
+
+.zones-section .table-hover tbody tr:hover {
+  background-color: rgba(75, 156, 222, 0.1);
+}
+
+.zones-section .btn-outline-primary {
+  transition: all 0.3s ease;
+}
+
+.zones-section .btn-outline-primary:hover {
+  background-color: #4b9cde;
+  color: white;
+  border-color: #4b9cde;
+}
