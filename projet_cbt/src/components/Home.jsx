@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+
+import ag_26 from "../assets/images/ag-2026.jpeg"; 
 import ded1 from "../assets/images/dedicace-temple-Diguéngué/dedicace-Diguéngue_1.jpeg";
 import ded2 from "../assets/images/dedicace-temple-Diguéngué/dedicace-Diguéngue_2.jpeg";
 import ded3 from "../assets/images/dedicace-temple-Diguéngué/dedicace-Diguéngue_3.jpeg";
@@ -9,9 +11,98 @@ import presidentCBT from "../assets/images/bureauCBT/PresidentCBT.jpeg"
 
 import "../assets/css/home.css"
 
-class Home extends React.Component {
 
-  render() {
+const HomeCarousel = ({ slides }) => {
+  return (
+    <div id="homeCarousel" className="carousel slide" data-bs-ride="carousel">
+      <div className="carousel-indicators">
+        {slides.map((_, idx) => (
+          <button
+            key={idx}
+            type="button"
+            data-bs-target="#homeCarousel"
+            data-bs-slide-to={idx}
+            className={idx === 0 ? "active" : ""}
+          ></button>
+        ))}
+      </div>
+
+      <div className="carousel-inner">
+        {slides.map((slide, idx) => (
+          <div key={idx} className={`carousel-item ${idx === 0 ? "active" : ""}`}>
+            <img
+              src={slide.image}
+              className="d-block w-100 carousel-img"
+              alt={slide.titre}
+            />
+            <div className="carousel-caption">
+              {slide.titre && <h1>{slide.titre}</h1>}
+              {slide.description && <p>{slide.description}</p>}
+              {slide.lienTexte && slide.lienURL && (
+                <a href={slide.lienURL} className="btn btn-lg carousel-btn">
+                  {slide.lienTexte}
+                </a>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <button
+        className="carousel-control-prev"
+        type="button"
+        data-bs-target="#homeCarousel"
+        data-bs-slide="prev"
+      >
+        <span className="carousel-control-prev-icon"></span>
+      </button>
+      <button
+        className="carousel-control-next"
+        type="button"
+        data-bs-target="#homeCarousel"
+        data-bs-slide="next"
+      >
+        <span className="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  );
+};
+
+
+const Home = () => {
+  const [slides, setSlides] = useState([]);
+
+// Simule un fetch depuis une API
+  useEffect(() => {
+    // Ici on pourra remplacer par fetch ou axios pour récupérer les données réelles
+    const dataFromAPI = [
+      {
+        image: ded1,
+        titre: "Présentation institutionnelle",
+        description: "Découvrez notre mission et notre vision.",
+        lienTexte: "Faire un don",
+        lienURL: "/don",
+      },
+      {
+        image: ag_26,
+        titre: "Actualités à la une",
+        description: "Info pour l'assemblé générale de 2026",
+        lienTexte: "Actualités",
+        lienURL: "/actualites",
+      },
+      {
+        image: ded2,
+        titre: "Prochains événements",
+        description: "Ne manquez pas nos activités et rencontres à venir.",
+        lienTexte: "Voir événements",
+        lienURL: "/evenements",
+      },
+    ];
+
+    setSlides(dataFromAPI);
+  }, []);
+
+
     return (
       <>
       {/* Section Hero */}
@@ -43,7 +134,7 @@ class Home extends React.Component {
 </section> */}
 
 
-        <div id="homeCarousel" className="carousel slide" data-bs-ride="carousel">
+        {/* <div id="homeCarousel" className="carousel slide" data-bs-ride="carousel">
           
           <div className="carousel-indicators">
             <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" className="active"></button>
@@ -54,7 +145,7 @@ class Home extends React.Component {
           <div className="carousel-inner">
 
             <div className="carousel-item active">
-              <img src={ded1} className="d-block w-100" alt="Slide 1" style={{height: '32rem', objectFit: 'cover'}} />
+              <img src={ag_26} className="d-block w-100" alt="Slide 1" style={{height: '32rem', objectFit: 'cover'}} />
               <div className="container">
                 <div className="carousel-caption text-start">
                   <h1>Présentation institutionnelle</h1>
@@ -96,7 +187,14 @@ class Home extends React.Component {
             <span className="carousel-control-next-icon"></span>
           </button>
 
-        </div>
+        </div> */}
+
+      {/* Section Hero */}
+    <div>
+      <HomeCarousel slides={slides} />
+    </div>
+
+
 
         {/* ================= SECTION MISSION & VISION ================= */}
         <section className="container py-5">
@@ -278,7 +376,6 @@ class Home extends React.Component {
 </section>
       </>
     );
-  }
 }
 
 export default Home
