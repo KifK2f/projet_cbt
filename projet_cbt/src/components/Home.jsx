@@ -11,7 +11,57 @@ import presidentCBT from "../assets/images/bureauCBT/PresidentCBT.jpeg"
 
 import "../assets/css/home.css"
 
+//Section DatesUtilesSection 
+const DatesUtilesSection = () => {
+  const [datesUtiles, setDatesUtiles] = useState([]);
+  const [annee, setAnnee] = useState(2026);
 
+  useEffect(() => {
+    setDatesUtiles([
+      { id: 1, titre: "Dimanche de la formation théologique", date: "2026-01-25", type: "Spirituel" },
+      { id: 2, titre: "Comité Exécutif", date: "2026-02-23", type: "Administratif" },
+      { id: 3, titre: "Assemblée Générale", date: "2026-03-16", type: "Administratif" },
+      { id: 4, titre: "Dimanche de Pentecôte", date: "2026-05-24", type: "Spirituel" },
+      { id: 5, titre: "Mois de la Mission", date: "2026-06-01", type: "Spirituel" },
+      { id: 6, titre: "Retraite annuelle", date: "2025-07-15", type: "Spirituel" },
+      { id: 7, titre: "Assemblée Extraordinaire", date: "2025-09-10", type: "Administratif" },
+    ]);
+  }, []);
+
+  const formatDate = (dateStr) => {
+    const [year, month, day] = dateStr.split("-");
+    const dateObj = new Date(year, month - 1, day);
+    return dateObj.toLocaleDateString("fr-FR", { day: "2-digit", month: "short" });
+  };
+
+  return (
+    <section className="dates-utiles-section">
+      <div className="text-center mb-4">
+        <h2>Dates Utiles {annee}</h2>
+        <p>Les prochains rendez-vous institutionnels de la CBT</p>
+        <div className="annee-selector mb-4">
+          {[2026, 2025].map(a => (
+            <button key={a} onClick={() => setAnnee(a)} className={`btn ${a === annee ? "btn-primary" : "btn-outline-primary"}`}>
+              {a}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="dates-list">
+        {datesUtiles.filter(d => new Date(d.date).getFullYear() === annee).map(d => (
+          <div key={d.id} className="date-item">
+            <div className="date">{formatDate(d.date)}</div>
+            <div className="titre">{d.titre}</div>
+            <span className={`badge ${d.type === "Spirituel" ? "badge-spirituel" : "badge-admin"}`}>{d.type}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+// Section Croussel
 const HomeCarousel = ({ slides }) => {
   return (
     <div id="homeCarousel" className="carousel slide" data-bs-ride="carousel">
@@ -193,6 +243,9 @@ const Home = () => {
     <div>
       <HomeCarousel slides={slides} />
     </div>
+
+    {/* Section Date utiles */}
+    <DatesUtilesSection />
 
 
 

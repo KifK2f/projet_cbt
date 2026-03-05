@@ -80,3 +80,92 @@
     font-size: 1rem;
   }
 }
+
+/* Date utilies */
+/* ===== DATES UTILES SIMPLIFIÉES ===== */
+.dates-utiles-section {
+  background: #f8f9fa;
+  padding: 3rem 1rem;
+}
+
+.dates-utiles-section h2 {
+  color: #4b9cde;
+  font-weight: 700;
+}
+
+.dates-utiles-section p {
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+.annee-selector button {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.annee-selector .btn-primary {
+  background-color: #4b9cde;
+  border-color: #4b9cde;
+}
+
+.dates-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.date-item {
+  background: white;
+  border-left: 4px solid #4b9cde;
+  padding: 1rem 1.2rem;
+  min-width: 220px;
+  max-width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+}
+
+.date-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.date-item .date {
+  font-weight: 700;
+  color: #4b9cde;
+  margin-bottom: 0.3rem;
+}
+
+.date-item .titre {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.date-item .badge {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+
+.badge-spirituel {
+  background-color: rgba(75,156,222,0.15);
+  color: #4b9cde;
+}
+
+.badge-admin {
+  background-color: rgba(108,117,125,0.15);
+  color: #6c757d;
+}
+
+@media (max-width: 576px) {
+  .dates-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+

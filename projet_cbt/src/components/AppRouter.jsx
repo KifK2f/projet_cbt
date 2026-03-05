@@ -5,6 +5,7 @@ import MotPresident from './MotPresident'
 import PageNotFound from './PageNotFound'
 import NotreHistoire from './NotreHistoire'
 import OrganisationCBT from './OrganisationCBT'
+import Evenements from './Evenements'
 
 
 // Composant générique pour les pages
@@ -15,13 +16,9 @@ const Page = ({ title, children }) => (
   </div>
 )
 
-class AppRouter extends React.Component {
-  constructor(){
-    super()
-    this.state = {}
-  }
+const AppRouter = () => {
 
-  render() {
+
     return (
       <Routes>
         {/* Pour les url erroné on affichera une page */}
@@ -40,7 +37,7 @@ class AppRouter extends React.Component {
 
         {/* Actualités et médias */}
         <Route path="/actualites" element={<Page title="Actualités" />} />
-        <Route path="/evenements" element={<Page title="Événements" />} />
+        <Route path="/evenements" element={<Evenements/>} />
         <Route path="/galerie" element={<Page title="Galerie photos" />} />
         <Route path="/videos-predications" element={<Page title="Vidéos et prédications" />} />
         <Route path="/newsletters" element={<Page title="Newsletters" />} />
@@ -74,6 +71,6 @@ class AppRouter extends React.Component {
       </Routes>
     )
   }
-}
+
 
 export default AppRouter

@@ -1,0 +1,51 @@
+.section-subtitle {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* ===== DATE UTILE CARD ===== */
+
+.date-utile-card {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 5px solid #4b9cde;
+  transition: 0.3s;
+}
+
+.date-utile-card:hover {
+  transform: translateY(-5px);
+}
+
+.periode {
+  font-weight: 600;
+  color: #4b9cde;
+}
+
+/* ===== EVENT CARD ===== */
+
+.event-card {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  position: relative;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+}
+
+.event-date {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #4b9cde;
+}
+
+.event-card.upcoming {
+  border-left: 6px solid #28a745;
+}
+
+.event-card.past {
+  opacity: 0.7;
+}
