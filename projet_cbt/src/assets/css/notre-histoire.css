@@ -4,7 +4,7 @@
   overflow-x: hidden;
 }
 
-/* HERO SECTION (Même animation que MotPresident) */
+/* HERO SECTION */
 .history-hero {
   height: 300px;
   background-image: url("../images/bible-ouverte.jpg");
@@ -26,7 +26,7 @@
   font-size: 4rem;
   font-weight: 700;
   color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
   letter-spacing: -0.02em;
   animation: fadeInDown 1s ease-out;
 }
@@ -54,13 +54,94 @@
   background: #ffffff;
   padding: 1.5rem 2rem;
   border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-.timeline-year {
-  font-weight: 700;
+/* ACCORDION */
+.accordion-header {
+  width: 100%;
+  background: #667eea;
+  color: #fff;
+  padding: 0.9rem 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: left;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+  margin-bottom: 0.5rem;
+}
+
+.accordion-header:hover {
+  background: #5563c1;
+}
+
+.accordion-header.active {
+  background: #4c5bd4;
+  border-radius: 12px 12px 0 0;
+}
+
+.accordion-icon {
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.accordion-icon.rotate {
+  transform: rotate(180deg);
+}
+
+/* Corps accordéon — hauteur dynamique */
+.accordion-body {
+  overflow: hidden;
+  transition: max-height 0.45s ease, padding 0.3s ease;
+  background: #f8fafc;
+  border-radius: 0 0 12px 12px;
+}
+
+.accordion-body > div {
+  padding: 1rem 1.2rem;
+}
+
+.accordion-body p {
+  margin: 0;
+  color: #4a5568;
+  line-height: 1.8;
+}
+
+/* GUIDE UTILISATEUR */
+.accordion-guide {
+  text-align: center;
+  font-weight: 500;
+  color: #4a5568;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.guide-arrow {
+  display: inline-block;
+  margin-left: 6px;
+  animation: bounce 1.5s infinite;
   color: #667eea;
-  font-size: 1.3rem;
+}
+
+/* ANIMATIONS */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(6px); }
+  100% { transform: translateY(0); }
 }
 
 /* STATS */
@@ -92,72 +173,9 @@
   opacity: 0.9;
 }
 
-/* ANIMATIONS (Identiques à MotPresident) */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .history-title {
-    font-size: 2.5rem;
-  }
-
-  .history-hero {
-    height: 250px;
-  }
-
-  .stats-grid {
-    flex-direction: column;
-  }
-}
-
-.accordion-header {
-  width: 100%;
-  background: #667eea;
-  color: #fff;
-  padding: 0.8rem 1.2rem;
-  border-radius: 12px;
-  cursor: pointer;
-  font-weight: 600;
-  text-align: left;
-  transition: background 0.3s;
-  margin-bottom: 0.5rem;
-}
-
-.accordion-header:hover {
-  background: #5563c1;
-}
-
-.accordion-body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-  background: #f8fafc;
-  border-radius: 12px;
-  padding: 0 1.2rem;
-}
-
-.accordion-body p {
-  margin: 1rem 0;
-  color: #4a5568;
-  line-height: 1.8;
+  .history-title { font-size: 2.5rem; }
+  .history-hero { height: 250px; }
+  .stats-grid { flex-direction: column; }
 }
