@@ -1,0 +1,36 @@
+.dons-section {
+  background: linear-gradient(to bottom, #f8f9fa, #eef1f5);
+}
+
+.don-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+}
+
+.don-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(75, 156, 222, 0.2);
+}
+
+.don-blob {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  opacity: 0.3;
+  filter: blur(20px);
+  animation: blob-bounce 6s infinite ease-in-out;
+}
+
+@keyframes blob-bounce {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(20px, -10px); }
+  50% { transform: translate(0, 20px); }
+  75% { transform: translate(-20px, -10px); }
+  100% { transform: translate(0, 0); }
+}

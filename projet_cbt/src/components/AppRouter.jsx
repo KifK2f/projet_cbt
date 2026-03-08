@@ -7,6 +7,8 @@ import NotreHistoire from './NotreHistoire'
 import OrganisationCBT from './OrganisationCBT'
 import Evenements from './Evenements'
 import Zones from './Zones'
+import Dons from './Dons'
+import ConfessionFoi from './ConfessionFoi'
 
 
 // Composant générique pour les pages
@@ -34,7 +36,7 @@ const AppRouter = () => {
         <Route path="/notre-histoire" element={<NotreHistoire />} />
         <Route path="/mission-valeurs" element={<Page title="Mission et Valeurs" />} />
         <Route path="/organisation-gouvernance" element={<OrganisationCBT/>} />
-        <Route path="/confession-foi" element={<Page title="Confession-foi" />} />
+        <Route path="/confession-foi" element={<ConfessionFoi/>} />
 
         {/* Actualités et médias */}
         <Route path="/actualites" element={<Page title="Actualités" />} />
@@ -62,7 +64,7 @@ const AppRouter = () => {
         <Route path="/calendrier" element={<Page title="Calendrier interne" />} />
 
         {/* S'engager */}
-        <Route path="/don" element={<Page title="Faire un don" />} />
+        <Route path="/don" element={<Dons/>} />
         <Route path="/benevole" element={<Page title="Devenir bénévole" />} />
         <Route path="/partenaire" element={<Page title="Devenir partenaire" />} />
         <Route path="/priere" element={<Page title="Soumettre une demande de prière" />} />

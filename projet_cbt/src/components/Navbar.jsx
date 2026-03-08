@@ -1,127 +1,261 @@
 import React from "react";
 import "../assets/css/navbar.css";
-import { Link } from "react-router-dom";
-import logo from "../assets/images/logo.png";
+import { NavLink } from "react-router-dom";
 
-class Navbar extends React.Component {
-  render() {
-    return (
-      <nav className="navbar navbar-expand-lg fixed-top shadow-sm navbar-custom">
-          <div className="container-fluid px-0 mx-3">
-          {/* Logo */}
-          <Link to="/">
-            <img src={logo} alt="Logo CBT" className="logo" />
-          </Link>
+/* MATERIAL ICONS */
 
-          {/* Toggler */}
-          <button
-            className="navbar-toggler bg-white"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarMain"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+import PersonIcon from "@mui/icons-material/Person";
+import HistoryEduIcon from "@mui/icons-material/HistoryEdu";
+import FlagIcon from "@mui/icons-material/Flag";
+import AccountTreeIcon from "@mui/icons-material/AccountTree";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
 
-          <div className="collapse navbar-collapse" id="navbarMain">
-            <ul className="navbar-nav mx-auto">
+import CampaignIcon from "@mui/icons-material/Campaign";
+import EventIcon from "@mui/icons-material/Event";
+import PhotoLibraryIcon from "@mui/icons-material/PhotoLibrary";
+import SmartDisplayIcon from "@mui/icons-material/SmartDisplay";
+import NewspaperIcon from "@mui/icons-material/Newspaper";
 
-              {/* ACCUEIL */}
-              <li className="nav-item">
-                <Link className="nav-link nav-custom" to="/">ACCUEIL</Link>
-              </li>
+import ChurchIcon from "@mui/icons-material/Church";
+import MapIcon from "@mui/icons-material/Map";
+import PublicIcon from "@mui/icons-material/Public";
+import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 
-              {/* DECOUVRIR LA CBT */}
-              <li className="nav-item dropdown">
-                <a className="nav-link nav-custom" href="#" data-bs-toggle="dropdown">
-                  DECOUVRIR LA CBT
-                </a>
-                <ul className="dropdown-menu dropdown-custom">
-                  <li><Link className="dropdown-item" to="/mot-president">Mot du Président</Link></li>
-                  <li><Link className="dropdown-item" to="/notre-histoire">Notre Histoire</Link></li>
-                  <li><Link className="dropdown-item" to="/mission-valeurs">Mission et Valeurs</Link></li>
-                  <li><Link className="dropdown-item" to="/organisation-gouvernance">Organisation et Gouvernance</Link></li>
-                  <li><Link className="dropdown-item" to="/confession-foi">Confession de foi</Link></li>
-                </ul>
-              </li>
+const Navbar = () => {
+  return (
+    <nav className="navbar navbar-expand-lg fixed-top shadow-sm navbar-custom">
 
-              {/* ACTUALITES ET MEDIAS */}
-              <li className="nav-item dropdown">
-                <a className="nav-link nav-custom" href="#" data-bs-toggle="dropdown">
-                  ACTUALITES ET MEDIAS
-                </a>
-                <ul className="dropdown-menu dropdown-custom">
-                  <li><Link className="dropdown-item" to="/actualites">Actualités</Link></li>
-                  <li><Link className="dropdown-item" to="/evenements">Evénements</Link></li>
-                  <li><Link className="dropdown-item" to="/galerie">Galerie photos</Link></li>
-                  <li><Link className="dropdown-item" to="/videos-predications">Vidéos et prédications</Link></li>
-                  <li><Link className="dropdown-item" to="/newsletters">Newsletters</Link></li>
-                </ul>
-              </li>
+      <div className="container-fluid px-0 mx-3">
 
-              {/* NOS EGLISES ET ŒUVRES */}
-              <li className="nav-item dropdown">
-                <a className="nav-link nav-custom" href="#" data-bs-toggle="dropdown">
-                  NOS EGLISES ET ŒUVRES
-                </a>
-                <ul className="dropdown-menu dropdown-custom">
-                  <li><Link className="dropdown-item" to="/carte-eglises">Carte interactive des églises</Link></li>
-                  <li><Link className="dropdown-item" to="/annuaire-region">Annuaire par région</Link></li>
-                  <li><Link className="dropdown-item" to="/zones">Zones</Link></li>
-                  <li><Link className="dropdown-item" to="/oeuvres-missions">Œuvres sociales et missions</Link></li>
-                </ul>
-              </li>
+        {/* LOGO */}
 
-              {/* RESSOURCES */}
-              {/* <li className="nav-item dropdown">
-                <a className="nav-link nav-custom" href="#" data-bs-toggle="dropdown">
-                  RESSOURCES
-                </a>
-                <ul className="dropdown-menu dropdown-custom">
-                  <li><Link className="dropdown-item" to="/bibliotheque">Bibliothèque numérique</Link></li>
-                  <li><Link className="dropdown-item" to="/telechargement">Téléchargements</Link></li>
-                  <li><Link className="dropdown-item" to="/liens-utiles">Liens utiles</Link></li>
-                </ul>
-              </li> */}
+        <NavLink to="/">
+          <img
+            src="http://localhost:8000/storage/CBT Logo.png"
+            alt="Logo CBT"
+            className="logo"
+          />
+        </NavLink>
 
-              {/* ESPACE MEMBRE */}
-              {/* <li className="nav-item dropdown">
-                <a className="nav-link nav-custom" href="#" data-bs-toggle="dropdown">
-                  ESPACE MEMBRE
-                </a>
-                <ul className="dropdown-menu dropdown-custom">
-                  <li><Link className="dropdown-item" to="/login">Connexion sécurisée</Link></li>
-                  <li><Link className="dropdown-item" to="/documents-reserves">Documents réservés</Link></li>
-                  <li><Link className="dropdown-item" to="/annuaire-interne">Annuaire interne</Link></li>
-                  <li><Link className="dropdown-item" to="/forum">Forum de discussion</Link></li>
-                  <li><Link className="dropdown-item" to="/calendrier">Calendrier interne</Link></li>
-                </ul>
-              </li> */}
 
-              {/* S'ENGAGER */}
-              {/* <li className="nav-item dropdown">
-                <a className="nav-link nav-custom" href="#" data-bs-toggle="dropdown">
-                  S'ENGAGER
-                </a>
-                <ul className="dropdown-menu dropdown-custom">
-                  <li><Link className="dropdown-item" to="/don">Faire un don</Link></li>
-                  <li><Link className="dropdown-item" to="/benevole">Devenir bénévole</Link></li>
-                  <li><Link className="dropdown-item" to="/partenaire">Devenir partenaire</Link></li>
-                  <li><Link className="dropdown-item" to="/priere">Soumettre une demande de prière</Link></li>
-                </ul>
-              </li> */}
+        {/* TOGGLER */}
 
-              {/* CONTACT */}
-              <li className="nav-item">
-                <Link className="nav-link nav-custom" to="/contact">CONTACT</Link>
-              </li>
+        <button
+          className="navbar-toggler bg-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMain"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-            </ul>
-          </div>
+
+        <div className="collapse navbar-collapse" id="navbarMain">
+
+          <ul className="navbar-nav mx-auto">
+
+
+            {/* ACCUEIL */}
+
+            <li className="nav-item">
+
+              <NavLink
+                to="/"
+                end
+                className={({ isActive }) =>
+                  isActive ? "nav-link nav-custom active-link" : "nav-link nav-custom"
+                }
+              >
+                ACCUEIL
+                <span className="nav-indicator"></span>
+              </NavLink>
+
+            </li>
+
+
+            {/* DECOUVRIR */}
+
+            <li className="nav-item dropdown">
+
+              <a
+                className="nav-link nav-custom"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                DECOUVRIR LA CBT
+                <span className="nav-indicator"></span>
+              </a>
+
+              <ul className="dropdown-menu dropdown-custom">
+
+                <li>
+                  <NavLink to="/mot-president" className="dropdown-item">
+                    <PersonIcon className="menu-icon"/>
+                    Mot du Président
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/notre-histoire" className="dropdown-item">
+                    <HistoryEduIcon className="menu-icon" />
+                    Notre Histoire
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/mission-valeurs" className="dropdown-item">
+                    <FlagIcon className="menu-icon" />
+                    Mission et Valeurs
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/organisation-gouvernance" className="dropdown-item">
+                    <AccountTreeIcon className="menu-icon" />
+                    Organisation et Gouvernance
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/confession-foi" className="dropdown-item">
+                    <MenuBookIcon className="menu-icon" />
+                    Confession de foi
+                  </NavLink>
+                </li>
+
+              </ul>
+
+            </li>
+
+
+            {/* ACTUALITES */}
+
+            <li className="nav-item dropdown">
+
+              <a
+                className="nav-link nav-custom"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                ACTUALITES ET MEDIAS
+                <span className="nav-indicator"></span>
+              </a>
+
+              <ul className="dropdown-menu dropdown-custom">
+
+                <li>
+                  <NavLink to="/actualites" className="dropdown-item">
+                    <CampaignIcon className="menu-icon" />
+                    Actualités
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/evenements" className="dropdown-item">
+                    <EventIcon className="menu-icon" />
+                    Évènements
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/galerie" className="dropdown-item">
+                    <PhotoLibraryIcon className="menu-icon" />
+                    Galerie photos
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/videos-predications" className="dropdown-item">
+                    <SmartDisplayIcon className="menu-icon" />
+                    Vidéos et prédications
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/newsletters" className="dropdown-item">
+                    <NewspaperIcon className="menu-icon" />
+                    Newsletters
+                  </NavLink>
+                </li>
+
+              </ul>
+
+            </li>
+
+
+            {/* EGLISES */}
+
+            <li className="nav-item dropdown">
+
+              <a
+                className="nav-link nav-custom"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                NOS EGLISES ET ŒUVRES
+                <span className="nav-indicator"></span>
+              </a>
+
+              <ul className="dropdown-menu dropdown-custom">
+
+                <li>
+                  <NavLink to="/carte-eglises" className="dropdown-item">
+                    <MapIcon className="menu-icon" />
+                    Carte interactive des églises
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/annuaire-region" className="dropdown-item">
+                    <PublicIcon className="menu-icon" />
+                    Annuaire par région
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/zones" className="dropdown-item">
+                    <ChurchIcon className="menu-icon" />
+                    Zones
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/oeuvres-missions" className="dropdown-item">
+                    <VolunteerActivismIcon className="menu-icon" />
+                    Œuvres sociales et missions
+                  </NavLink>
+                </li>
+
+              </ul>
+
+            </li>
+
+
+            {/* CONTACT */}
+
+            <li className="nav-item">
+
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive ? "nav-link nav-custom active-link" : "nav-link nav-custom"
+                }
+              >
+                CONTACT
+                <span className="nav-indicator"></span>
+              </NavLink>
+
+            </li>
+
+
+          </ul>
+
         </div>
-      </nav>
-    );
-  }
-}
+
+      </div>
+
+    </nav>
+  );
+};
 
 export default Navbar;

@@ -1,0 +1,90 @@
+.confession-page{
+  background:#f8fafc;
+}
+
+/* HERO */
+
+.confession-hero{
+  height:300px;
+  background-image:url("../images/bible-ouverte.jpg");
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  position:relative;
+}
+
+.confession-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.confession-title{
+  font-size:3.5rem;
+  color:white;
+  font-weight:700;
+}
+
+/* SECTION */
+
+.confession-section{
+  padding:4rem 0;
+}
+
+/* GRID */
+
+.articles-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+}
+
+/* CARD */
+
+.article-card{
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  transition:0.3s;
+  position:relative;
+}
+
+.article-card:hover{
+  transform:translateY(-5px);
+}
+
+/* NUMBER */
+
+.article-number{
+  position:absolute;
+  top:-15px;
+  left:-15px;
+  width:40px;
+  height:40px;
+  background:#667eea;
+  color:white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+}
+
+/* TITLE */
+
+.article-title{
+  font-size:1.2rem;
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+/* CONTENT */
+
+.article-content{
+  line-height:1.7;
+  color:#4a5568;
+}
