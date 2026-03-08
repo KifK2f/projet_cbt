@@ -13,10 +13,11 @@
     color: white;
     font-weight: 700;
     display: inline-block;
-    margin-bottom: clamp(30px,5vw,50px);
+    /* margin-bottom: clamp(30px,5vw,50px); */
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
     text-transform: uppercase;
-    font-size: clamp(0.9rem,1.3vw,1.2rem);
+    /* font-size: clamp(0.9rem,1.3vw,1.2rem); */
+    font-size: 1.10rem;
     letter-spacing: 1px;
 }
 .banner-red { background: linear-gradient(to bottom, #ff0000,#cc0000); border: 2px solid #fff; }
@@ -48,8 +49,8 @@
     background: rgba(255,255,255,0.95);
     backdrop-filter: blur(5px);
     border-radius: 12px;
-    padding: clamp(8px,1vw,14px);
-    min-height: 90px;
+    /* padding: clamp(8px,1vw,14px); */
+    /* min-height: 90px; */
     box-shadow:0 4px 12px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
     width: 100%; 
@@ -61,7 +62,7 @@
     background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
     border: 2px solid #d4af37; /* Rappel de l'or du cadre */
     border-radius: 15px;
-    padding: 15px;
+    /* padding: 15px; */
     box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2); /* Ombre dorée diffuse */
     position: relative;
     z-index: 3;
@@ -92,7 +93,7 @@
     border-radius: 15px; /* On garde l'arrondi simple pour la compatibilité, mais avec une bordure dorée unie */
     border: 2px solid #d4af37; 
 
-    padding: 20px;
+    /* padding: 20px; */
     
     /* Ombre Douce et Profonde */
     box-shadow: 0 15px 35px rgba(212, 175, 55, 0.25), /* Ombre dorée */
@@ -139,25 +140,25 @@
 
 /* Le Nom : Plus grand, espacé et sombre */
 .info-main .member-name {
-    font-size: 0.95rem; /* Dynamique */
-    font-weight: 800;
+    font-size: 0.9rem; /* Dynamique */
+    font-weight: 900;
     text-transform: uppercase;
     color: #1a1a1a;
     letter-spacing: 1.5px; /* Espacement "luxueux" */
-    margin-bottom: 6px;
-    line-height: 1.2;
+    /* margin-bottom: 6px; */
+    /* line-height: 1.2; */
 }
 
 /* Le Rôle : Italique, rouge officiel, souligné discrètement */
 .info-main .member-role {
     font-style: italic;
     color: #cc0000; /* Rouge vif */
-    font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+    font-size: 0.9rem; /* Dynamique */
     font-weight: 600;
-    margin: 8px 0;
+    /* margin: 8px 0; */
     display: inline-block; /* Pour que le soulignement ne prenne que la largeur du texte */
     position: relative;
-    padding-bottom: 5px;
+    /* padding-bottom: 5px; */
 }
 
 /* Soulignement doré sous le rôle */
@@ -176,8 +177,10 @@
     font-size: 0.85rem;
     font-weight: 500;
     color: #555;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     opacity: 0.8;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 
@@ -199,8 +202,11 @@
 }
 
 .frame-main {
-    width: clamp(220px,25vw,320px);
-    height: clamp(240px,28vw,340px);
+    margin-top: 20px;
+    /* width: clamp(220px,25vw,320px);
+    height: clamp(240px,28vw,340px); */
+    width: 100%;
+    height: 330px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -224,8 +230,10 @@
     gap:30px;
     animation: scroll 30s linear infinite;
 }
-.scroll-wrapper:hover .scroll-track { animation-play-state:paused; }
-.speed-normal { animation-duration:30s; }
+
+/* pour stoper le scroll au hover */
+/* .scroll-wrapper:hover .scroll-track { animation-play-state:paused; } */
+.speed-normal { animation-duration: 50s; }
 
 /* ======================= */
 /* EXECUTIF CARDS */
