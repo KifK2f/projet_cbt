@@ -62,17 +62,21 @@ const ZonesSection = ({ title, members }) => {
   return (
     <div className="section-wrapper">
       <div className="banner banner-blue">{title}</div>
-      {rows.map((row, idx) => (
-        <div key={idx} className="scroll-wrapper">
-          <div className="scroll-track speed-normal">
-            {row.map((m, i) => (
-              <div key={i} className="zone-card">
-                <MemberCard {...m} type="blue" />
-              </div>
-            ))}
+      {rows.map((row, idx) => {
+        // Dupliquer la ligne pour scroll infini
+        const displayRow = [...row, ...row];
+        return (
+          <div key={idx} className="scroll-wrapper">
+            <div className="scroll-track speed-normal">
+              {displayRow.map((m, i) => (
+                <div key={i} className="zone-card">
+                  <MemberCard {...m} type="blue" />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 };
