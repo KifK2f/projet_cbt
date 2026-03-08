@@ -154,10 +154,10 @@ class Footer extends React.Component {
             </small>
 
             <div className="footer-bottom-links">
-
+{/* 
               <a href="/confidentialite">Confidentialité</a>
               <a href="/mentions-legales">Mentions légales</a>
-              <a href="/contact">Contact</a>
+              <a href="/contact">Contact</a> */}
 
             </div>
 

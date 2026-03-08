@@ -5,9 +5,9 @@ font-size:14px;
 }
 
 .footer-logo{
-width:55px;
-height:55px;
-border-radius:50%;
+width:100px;
+height:100%;
+/* border-radius:50%; */
 border:2px solid rgba(75,156,222,0.4);
 object-fit:cover;
 }
@@ -70,19 +70,18 @@ opacity:0.9;
 }
 
 .subscribe-box input{
-background:rgba(255,255,255,0.05);
 border:1px solid rgba(75,156,222,0.2);
-color:white;
+color:white ;
 }
 
 .btn-subscribe{
-background:rgba(75,156,222,0.3);
-color:white;
+background:rgba(75,156,222,0.3) !important;
+color:white !important;
 font-weight:600;
 }
 
 .btn-subscribe:hover{
-background:#4b9cde;
+background:#4b9cde !important;
 }
 
 .footer-divider{
