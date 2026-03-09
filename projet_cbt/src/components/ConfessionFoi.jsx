@@ -1,101 +1,113 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../assets/css/confession-foi.css";
+import ConfessionFoiService from "../service/ConfessionFoiService";
+
+const ArticleItem = ({ item, index }) => {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setVisible(true);
+      },
+      { threshold: 0.15 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <article
+      ref={ref}
+      className={`foi-article ${visible ? "foi-article--visible" : ""}`}
+      style={{ transitionDelay: `${index * 0.08}s` }}
+    >
+      <div className="foi-article-number">{item.id}</div>
+
+      <div className="foi-article-body">
+        <p className="foi-article-content">
+          {item.content}
+        </p>
+
+        <div className="foi-divider"></div>
+
+        <p className="foi-article-verses">
+          {item.verses}
+        </p>
+      </div>
+    </article>
+  );
+};
 
 const ConfessionFoi = () => {
 
   const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // Simulation API
   useEffect(() => {
-
-    const fakeApiData = [
-
-      {
-        id:1,
-        number:1,
-        title:"La Bible",
-        content:"La Bible, composée des soixante-six livres canoniques, est tout entière inspirée de Dieu et constitue la révélation écrite complète de Dieu à l'homme."
-      },
-
-      {
-        id:2,
-        number:2,
-        title:"Dieu",
-        content:"Dieu est un et éternel, créateur de l’univers, révélé en trois personnes : Père, Fils et Saint-Esprit."
-      },
-
-      {
-        id:3,
-        number:3,
-        title:"Le salut",
-        content:"Dieu entend nos prières et sauve du péché ceux qui viennent à lui par la foi en Jésus-Christ."
-      },
-
-      {
-        id:4,
-        number:4,
-        title:"Jésus-Christ",
-        content:"Jésus-Christ est le Fils unique de Dieu, né d’une vierge, qui a vécu sans péché et s’est offert en sacrifice pour les péchés des hommes."
-      },
-
-      {
-        id:5,
-        number:5,
-        title:"La résurrection",
-        content:"Jésus-Christ est ressuscité et est le seul médiateur entre Dieu et les hommes."
-      }
-
-    ];
-
-    // Simulation d'une réponse API
-    setTimeout(() => {
-      setArticles(fakeApiData);
-    }, 500);
-
+    ConfessionFoiService.getAllconfessionFoi()
+      .then((res) => {
+        const sorted = res.data.sort((a, b) => a.id - b.id);
+        setArticles(sorted);
+      })
+      .catch((err) => {
+        console.error("Erreur chargement confession :", err);
+      })
+      .finally(() => setLoading(false));
   }, []);
 
-
   return (
-    <section className="confession-page">
+    <section className="foi-page">
 
-      {/* HERO */}
-      <div className="confession-hero">
-        <div className="confession-overlay">
-          <div className="container text-center">
-            <h1 className="confession-title">Confession de Foi</h1>
+      {/* HERO (identique à ton autre page) */}
+
+      <div className="foi-hero">
+        <div className="foi-overlay">
+          <div className="container h-100">
+            <div className="row h-100 align-items-center justify-content-center text-center">
+              <div className="col-lg-8">
+                <h1 className="foi-title">
+                  Confession de Foi
+                </h1>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
 
       {/* ARTICLES */}
-      <div className="confession-section">
+
+      <div className="foi-section">
 
         <div className="container">
 
-          <div className="articles-grid">
+          {loading ? (
 
-            {articles.map((element) => (
+            <div className="foi-loading">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
 
-              <div className="article-card" key={element.id}>
+          ) : (
 
-                <div className="article-number">
-                  {element.number}
-                </div>
+            <div className="foi-articles">
 
-                <h3 className="article-title">
-                  {element.title}
-                </h3>
+              {articles.map((item, index) => (
+                <ArticleItem
+                  key={item.id}
+                  item={item}
+                  index={index}
+                />
+              ))}
 
-                <p className="article-content">
-                  {element.content}
-                </p>
+            </div>
 
-              </div>
-
-            ))}
-
-          </div>
+          )}
 
         </div>
 

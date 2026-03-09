@@ -1,10 +1,11 @@
-.confession-page{
-  background:#f8fafc;
+.foi-page{
+  background:#ffffff;
+  color:#2d3748;
 }
 
-/* HERO */
+/* HERO (même style que ton autre page) */
 
-.confession-hero{
+.foi-hero{
   height:300px;
   background-image:url("../images/bible-ouverte.jpg");
   background-size:cover;
@@ -13,78 +14,210 @@
   position:relative;
 }
 
-.confession-overlay{
+.foi-overlay{
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.6);
+  background:linear-gradient(
+    135deg,
+    rgba(44,62,80,0.9),
+    rgba(52,73,94,0.85)
+  );
   display:flex;
   align-items:center;
-  justify-content:center;
 }
 
-.confession-title{
-  font-size:3.5rem;
-  color:white;
+.foi-title{
+  font-size:4rem;
   font-weight:700;
+  color:#ffffff;
+  letter-spacing:-0.02em;
+  animation:fadeDown 1s ease-out;
 }
+
 
 /* SECTION */
 
-.confession-section{
+.foi-section{
   padding:4rem 0;
+  background:linear-gradient(
+    135deg,
+    #f8fafc 0%,
+    #f1f5f9 100%
+  );
 }
 
-/* GRID */
+.foi-articles{
+  max-width:850px;
+  margin:auto;
+}
 
-.articles-grid{
+
+/* ARTICLE */
+
+.foi-article{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:25px;
+  grid-template-columns:70px 1fr;
+  gap:2rem;
+  padding:2.2rem 0;
+  border-bottom:1px solid #e2e8f0;
+
+  opacity:0;
+  transform:translateY(30px);
+
+  transition:
+  opacity 0.6s ease,
+  transform 0.6s ease;
 }
 
-/* CARD */
-
-.article-card{
-  background:white;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.05);
-  transition:0.3s;
-  position:relative;
+.foi-article:first-child{
+  border-top:1px solid #e2e8f0;
 }
 
-.article-card:hover{
-  transform:translateY(-5px);
+.foi-article--visible{
+  opacity:1;
+  transform:translateY(0);
 }
+
 
 /* NUMBER */
 
-.article-number{
-  position:absolute;
-  top:-15px;
-  left:-15px;
-  width:40px;
-  height:40px;
-  background:#667eea;
-  color:white;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:bold;
-}
+.foi-article-number{
 
-/* TITLE */
-
-.article-title{
-  font-size:1.2rem;
+  font-size:2rem;
   font-weight:700;
-  margin-bottom:10px;
+  color:#667eea;
+
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-end;
+
+  position:relative;
 }
 
-/* CONTENT */
+.foi-article-number::after{
 
-.article-content{
-  line-height:1.7;
-  color:#4a5568;
+  content:"";
+
+  position:absolute;
+  right:-15px;
+  top:8px;
+
+  width:1px;
+  height:70%;
+
+  background:#667eea;
+  opacity:0.4;
+}
+
+
+/* BODY */
+
+.foi-article-body{
+  display:flex;
+  flex-direction:column;
+  gap:0.8rem;
+}
+
+.foi-article-content{
+  font-size:1rem;
+  line-height:1.8;
+  margin:0;
+  color:#374151;
+}
+
+.foi-divider{
+  width:40px;
+  height:2px;
+  background:#667eea;
+  opacity:0.6;
+}
+
+.foi-article-verses{
+  font-size:0.85rem;
+  color:#667eea;
+  line-height:1.6;
+  margin:0;
+}
+
+
+/* LOADING */
+
+.foi-loading{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  padding:4rem 0;
+}
+
+.foi-loading span{
+
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#667eea;
+
+  animation:pulse 1.2s infinite;
+}
+
+.foi-loading span:nth-child(2){
+  animation-delay:0.2s;
+}
+
+.foi-loading span:nth-child(3){
+  animation-delay:0.4s;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes fadeDown{
+
+  from{
+    opacity:0;
+    transform:translateY(-25px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+@keyframes pulse{
+
+  0%,100%{
+    opacity:0.3;
+    transform:scale(0.8);
+  }
+
+  50%{
+    opacity:1;
+    transform:scale(1);
+  }
+
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.foi-title{
+  font-size:2.5rem;
+}
+
+.foi-hero{
+  height:250px;
+}
+
+.foi-article{
+  grid-template-columns:50px 1fr;
+  gap:1.2rem;
+}
+
+.foi-article-number{
+  font-size:1.6rem;
+}
+
 }
