@@ -1,0 +1,153 @@
+.contact-page{
+  background:#ffffff;
+  color:#2d3748;
+}
+
+
+/* HERO */
+
+.contact-hero{
+  height:300px;
+  background-image:url("../images/bible-ouverte.jpg");
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  position:relative;
+}
+
+.contact-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    135deg,
+    rgba(44,62,80,0.9),
+    rgba(52,73,94,0.85)
+  );
+  display:flex;
+  align-items:center;
+}
+
+.contact-title{
+  font-size:4rem;
+  font-weight:700;
+  color:white;
+  letter-spacing:-0.02em;
+  animation:fadeDown 1s ease-out;
+}
+
+
+/* SECTION */
+
+.contact-section{
+  padding:4rem 0;
+  background:linear-gradient(
+    135deg,
+    #f8fafc 0%,
+    #f1f5f9 100%
+  );
+}
+
+
+/* CONTACT CARDS */
+
+.contact-card{
+  background:white;
+  padding:1.5rem;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  transition:transform 0.25s ease;
+}
+
+.contact-card:hover{
+  transform:translateY(-5px);
+}
+
+.contact-card h5{
+  font-weight:600;
+  color:#667eea;
+}
+
+.contact-card p{
+  margin:0;
+  color:#4a5568;
+}
+
+
+/* MAP */
+
+.contact-map iframe{
+  border-radius:12px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
+
+
+/* FORM */
+
+.contact-form-title{
+  font-weight:700;
+  margin-bottom:1.5rem;
+}
+
+.contact-form label{
+  font-weight:500;
+  margin-bottom:5px;
+}
+
+.contact-form .form-control{
+  border-radius:8px;
+  border:1px solid #e2e8f0;
+}
+
+.contact-form .form-control:focus{
+  border-color:#667eea;
+  box-shadow:none;
+}
+
+
+/* BUTTON */
+
+.contact-btn{
+  background:#667eea;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius:8px;
+  font-weight:600;
+  transition:background 0.3s;
+}
+
+.contact-btn:hover{
+  background:#5563c1;
+}
+
+
+/* ANIMATION */
+
+@keyframes fadeDown{
+
+  from{
+    opacity:0;
+    transform:translateY(-25px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.contact-title{
+  font-size:2.5rem;
+}
+
+.contact-hero{
+  height:250px;
+}
+
+}

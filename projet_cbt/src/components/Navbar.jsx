@@ -101,13 +101,13 @@ const Navbar = () => {
                     Notre Histoire
                   </NavLink>
                 </li>
-
+{/* 
                 <li>
                   <NavLink to="/mission-valeurs" className="dropdown-item">
                     <FlagIcon className="menu-icon" />
                     Mission et Valeurs
                   </NavLink>
-                </li>
+                </li> */}
 
                 <li>
                   <NavLink to="/organisation-gouvernance" className="dropdown-item">

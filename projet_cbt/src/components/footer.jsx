@@ -150,7 +150,7 @@ class Footer extends React.Component {
           <div className="d-flex justify-content-between flex-wrap">
 
             <small className="footer-copy">
-              © 2026 Convention Baptiste du Togo
+              © 2026 By Sabel Informatique
             </small>
 
             <div className="footer-bottom-links">

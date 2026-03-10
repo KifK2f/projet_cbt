@@ -9,6 +9,7 @@ import Evenements from './Evenements'
 import Zones from './Zones'
 import Dons from './Dons'
 import ConfessionFoi from './ConfessionFoi'
+import Contact from './Contact'
 
 
 // Composant générique pour les pages
@@ -70,7 +71,7 @@ const AppRouter = () => {
         <Route path="/priere" element={<Page title="Soumettre une demande de prière" />} />
 
         {/* Contact */}
-        <Route path="/contact" element={<Page title="Contact" />} />
+        <Route path="/contact" element={<Contact/>} />
       </Routes>
     )
   }
