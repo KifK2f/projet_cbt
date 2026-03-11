@@ -1,17 +1,93 @@
-import React from "react";
+import React, { useState } from "react";
+import PhoneInput from "react-phone-input-2";
+import fr from "react-phone-input-2/lang/fr.json";
+import "react-phone-input-2/lib/bootstrap.css";
+
 import "../assets/css/contact.css";
 
 const Contact = () => {
+
+  const [phone, setPhone] = useState("");
+  const [countryCode, setCountryCode] = useState("228");
+  const [countryIso, setCountryIso] = useState("tg");
+
+
+
+  const formatTogoNumber = (value) => {
+
+    let numbers = value.replace(/\D/g, "");
+
+    numbers = numbers.slice(0, 8);
+
+    const parts = numbers.match(/.{1,2}/g);
+
+    return parts ? parts.join(" ") : numbers;
+
+  };
+
+
+
+  const handlePhoneChange = (e) => {
+
+    let value = e.target.value;
+
+    if (countryIso === "tg") {
+
+      value = formatTogoNumber(value);
+
+    } else {
+
+      value = value.replace(/\D/g, "").slice(0, 15);
+
+    }
+
+    setPhone(value);
+
+  };
+
+
+
+  const handleCountryChange = (value, country) => {
+
+    setCountryCode(country.dialCode);
+    setCountryIso(country.countryCode);
+    setPhone("");
+
+  };
+
+
+
+  const handleSubmit = (e) => {
+
+    e.preventDefault();
+
+    const formData = {
+
+      indicatif: "+" + countryCode,
+      numero: phone.replace(/\s/g, "")
+
+    };
+
+    console.log(formData);
+
+  };
+
+
+
   return (
+
     <section className="contact-page">
 
       {/* HERO */}
+
       <div className="contact-hero">
         <div className="contact-overlay">
           <div className="container h-100">
             <div className="row h-100 align-items-center justify-content-center text-center">
               <div className="col-lg-8">
-                <h1 className="contact-title">Contactez-nous</h1>
+                <h1 className="contact-title">
+                  Contactez-nous
+                </h1>
               </div>
             </div>
           </div>
@@ -19,14 +95,16 @@ const Contact = () => {
       </div>
 
 
-      {/* CONTACT SECTION */}
+
+      {/* SECTION */}
+
       <div className="contact-section">
 
         <div className="container">
 
           <div className="row g-5">
 
-            {/* CONTACT INFOS */}
+            {/* INFOS */}
 
             <div className="col-lg-6">
 
@@ -62,7 +140,6 @@ const Contact = () => {
                   title="map"
                   width="100%"
                   height="330"
-                  frameBorder="0"
                   src="https://maps.google.com/maps?q=lome%20togo&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 ></iframe>
 
@@ -80,7 +157,10 @@ const Contact = () => {
                 Envoyez-nous un message
               </h3>
 
-              <form className="contact-form">
+              <form
+                className="contact-form"
+                onSubmit={handleSubmit}
+              >
 
                 <div className="row">
 
@@ -104,6 +184,8 @@ const Contact = () => {
 
                 </div>
 
+
+
                 <div className="mb-3">
                   <label>Email</label>
                   <input
@@ -113,14 +195,47 @@ const Contact = () => {
                   />
                 </div>
 
+
+
+                {/* PAYS */}
+
+                <div className="mb-5">
+
+                  <label>Pays</label>
+
+                  <PhoneInput
+                    country={"tg"}
+                    // preferredCountries={["tg", "fr", "bj", "gh", "ci"]}
+                    localization={fr}
+                    enableSearch={true}
+                    value={countryCode}
+                    onChange={handleCountryChange}
+                    inputStyle={{ display: "none" }}
+                    containerClass="country-selector"
+                  />
+
+                </div>
+
+
+
+                {/* NUMERO */}
+
                 <div className="mb-3">
-                  <label>Téléphone</label>
+
+                  <label>Numéro de téléphone</label>
+
                   <input
                     type="tel"
-                    className="form-control"
-                    placeholder="+228"
+                    className="form-control phone-number"
+                    // placeholder="90 12 34 56"
+                    value={phone}
+                    onChange={handlePhoneChange}
+                    required
                   />
+
                 </div>
+
+
 
                 <div className="mb-3">
                   <label>Message</label>
@@ -130,7 +245,12 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
-                <button className="contact-btn">
+
+
+                <button
+                  type="submit"
+                  className="contact-btn"
+                >
                   Envoyer le message
                 </button>
 
@@ -145,7 +265,9 @@ const Contact = () => {
       </div>
 
     </section>
+
   );
+
 };
 
 export default Contact;

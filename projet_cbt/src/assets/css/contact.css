@@ -4,6 +4,7 @@
 }
 
 
+
 /* HERO */
 
 .contact-hero{
@@ -36,6 +37,7 @@
 }
 
 
+
 /* SECTION */
 
 .contact-section{
@@ -48,7 +50,8 @@
 }
 
 
-/* CONTACT CARDS */
+
+/* CARD */
 
 .contact-card{
   background:white;
@@ -73,12 +76,14 @@
 }
 
 
+
 /* MAP */
 
 .contact-map iframe{
   border-radius:12px;
   box-shadow:0 10px 20px rgba(0,0,0,0.08);
 }
+
 
 
 /* FORM */
@@ -104,6 +109,31 @@
 }
 
 
+
+/* PHONE */
+
+.phone-number{
+  letter-spacing:2px;
+  font-size:16px;
+}
+
+
+
+/* COUNTRY SELECTOR */
+
+.country-selector{
+  width:100%;
+}
+
+.country-selector .flag-dropdown{
+  border-radius:8px;
+  border:1px solid #e2e8f0;
+  background:#f8fafc;
+  height:38px;
+}
+
+
+
 /* BUTTON */
 
 .contact-btn{
@@ -121,6 +151,7 @@
 }
 
 
+
 /* ANIMATION */
 
 @keyframes fadeDown{
@@ -136,6 +167,7 @@
   }
 
 }
+
 
 
 /* RESPONSIVE */
