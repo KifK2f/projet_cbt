@@ -83,7 +83,7 @@ const Contact = () => {
     <section className="contact-page">
 
       {/* HERO */}
-
+{/* 
       <div className="contact-hero">
         <div className="contact-overlay">
           <div className="container h-100">
@@ -96,7 +96,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
 
 

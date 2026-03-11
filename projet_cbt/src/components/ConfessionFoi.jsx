@@ -63,7 +63,7 @@ const ConfessionFoi = () => {
     <section className="foi-page">
 
       {/* HERO (identique à ton autre page) */}
-
+{/* 
       <div className="foi-hero">
         <div className="foi-overlay">
           <div className="container h-100">
@@ -76,7 +76,7 @@ const ConfessionFoi = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
 
       {/* ARTICLES */}

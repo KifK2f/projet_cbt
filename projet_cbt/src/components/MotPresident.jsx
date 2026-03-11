@@ -20,7 +20,7 @@ const MotPresident = () => {
   return (
     <section className="mot-president-page">
       {/* HERO SECTION ÉLÉGANTE */}
-      <div className="president-hero">
+      {/* <div className="president-hero">
         <div className="hero-overlay">
           <div className="container h-100">
             <div className="row h-100 align-items-center justify-content-center text-center">
@@ -30,7 +30,7 @@ const MotPresident = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* SECTION PRÉSIDENT */}
       <div className="president-section">

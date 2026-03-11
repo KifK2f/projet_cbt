@@ -1,0 +1,87 @@
+import React from "react";
+import { useLocation } from "react-router-dom";
+import "../assets/css/banner.css";
+
+const sectionMap = {
+
+  "mot-president": "Découvrir la CBT",
+  "notre-histoire": "Découvrir la CBT",
+  "mission-valeurs": "Découvrir la CBT",
+  "organisation-gouvernance": "Découvrir la CBT",
+  "confession-foi": "Découvrir la CBT",
+
+  "actualites": "Actualités et médias",
+  "evenements": "Actualités et médias",
+  "galerie": "Actualités et médias",
+  "videos-predications": "Actualités et médias",
+  "newsletters": "Actualités et médias",
+
+  "carte-eglises": "Nos églises",
+  "annuaire-region": "Nos églises",
+  "zones": "Nos églises",
+  "oeuvres-missions": "Nos églises",
+
+  "bibliotheque": "Ressources",
+  "telechargement": "Ressources",
+  "liens-utiles": "Ressources",
+
+  "don": "S'engager",
+  "benevole": "S'engager",
+  "partenaire": "S'engager",
+  "priere": "S'engager"
+
+};
+
+const Banner = () => {
+
+  const location = useLocation();
+  const path = location.pathname;
+
+  const segments = path.split("/").filter(Boolean);
+  const page = segments[0];
+
+  if (!page) return null; // pas de banner sur accueil
+
+  const title = page
+    .replace(/[-_]/g, " ")
+    .replace(/\b\w/g, c => c.toUpperCase());
+
+  const section = sectionMap[page];
+
+  return (
+
+    <section className="bannercomponent">
+
+      <div className="bannercomponent-overlay">
+
+        <div className="bannercomponent-content">
+
+          <h1 className="bannercomponent-title">{title}</h1>
+
+          <div className="bannercomponent-path">
+
+            {section && (
+              <>
+                <span>{section}</span>
+              </>
+            )}
+
+            {page !== "contact" && (
+              <>
+                <span className="separator"> &gt; </span>
+                <span>{title}</span>
+              </>
+            )}
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  );
+};
+
+export default Banner;

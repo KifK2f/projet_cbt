@@ -64,7 +64,7 @@ const NotreHistoire = () => {
     <section className="history-page">
 
       {/* HERO */}
-      <div className="history-hero">
+      {/* <div className="history-hero">
         <div className="history-overlay">
           <div className="container h-100">
             <div className="row h-100 align-items-center justify-content-center text-center">
@@ -74,7 +74,7 @@ const NotreHistoire = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* TIMELINE */}
       <div className="timeline-section">
