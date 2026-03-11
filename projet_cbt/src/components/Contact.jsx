@@ -3,6 +3,10 @@ import PhoneInput from "react-phone-input-2";
 import fr from "react-phone-input-2/lang/fr.json";
 import "react-phone-input-2/lib/bootstrap.css";
 
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import PhoneIcon from "@mui/icons-material/Phone";
+import EmailIcon from "@mui/icons-material/Email";
+
 import "../assets/css/contact.css";
 
 const Contact = () => {
@@ -112,26 +116,26 @@ const Contact = () => {
 
                 <div className="col-md-6">
                   <div className="contact-card">
-                    <h5>Email</h5>
-                    <p>contact@eglise.org</p>
+                    <h5><EmailIcon className="me-2 footer-icon"/>Email</h5>
+                    convention.togo@gmail.com <br/>
+                  cbtogo2@yahoo.fr
                   </div>
                 </div>
 
                 <div className="col-md-6">
                   <div className="contact-card">
-                    <h5>Téléphone</h5>
-                    <p>+228 90 00 00 00</p>
+                    <h5><PhoneIcon className="me-2 footer-icon"/>Téléphone</h5>
+                  (+228) 22 20 85 56 / 22 21 95 26 <br/>
+                  (+228) 91 12 72 92 / 97 68 40 25
                   </div>
                 </div>
 
               </div>
 
               <div className="contact-card mt-4">
-                <h5>Adresse</h5>
-                <p>
-                  Lomé, Togo <br />
-                  Quartier Adidogomé
-                </p>
+                <h5><LocationOnIcon className="me-2 footer-icon"/>Adresse</h5>
+                657 Bd de la Kara, Tokoin Doumasséssé <br/>
+                  08 B.P. 80754 Lomé
               </div>
 
               <div className="contact-map mt-4">
@@ -140,7 +144,8 @@ const Contact = () => {
                   title="map"
                   width="100%"
                   height="330"
-                  src="https://maps.google.com/maps?q=lome%20togo&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2985.4031303883903!2d1.2115329372903079!3d6.162350254030409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023e2087d04cc55%3A0x7bfd2e51baff6cff!2s%C3%89glise%20baptiste%20de%20Tokoin%20Doumass%C3%A9ss%C3%A9!5e1!3m2!1sfr!2stg!4v1773190233030!5m2!1sfr!2stg"
+                  // src="https://maps.google.com/maps?q=lome%20togo&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 ></iframe>
 
               </div>
