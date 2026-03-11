@@ -4,14 +4,60 @@ width:100vw;
 margin-left:calc(-50vw + 50%);
 height:300px;
 
-/* background-image:url("../images/bible-ouverte.jpg"); */
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
-
 position:relative;
+overflow:hidden;
 
 }
+
+
+/* IMAGE */
+
+.banner-image{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+/* POSITION IMPORTANTE DE L'IMAGE */
+object-position:50% 70%;
+
+/* 50% = centre horizontal
+
+35% = hauteur visible
+
+Exemples :
+
+valeur	résultat
+50% 10%	montre le haut
+50% 30%	haut important
+50% 50%	centre
+50% 70%	montre le bas */
+
+/* CONTRASTE ET LUMINOSITE */
+filter:
+brightness(1)
+/* valeur	effet
+1	normal
+0.8	sombre
+0.6	très sombre */
+
+
+contrast(1.15)
+/* valeur	effet
+1	normal
+1.2	plus contrasté
+1.4	très contrasté */
+
+
+saturate(1.1); /* jouter plus de couleur */
+
+}
+
+
+/* OVERLAY */
 
 .bannercomponent-overlay{
 
@@ -20,8 +66,8 @@ inset:0;
 
 background:linear-gradient(
 135deg,
-rgba(44,62,80,0.9),
-rgba(52,73,94,0.85)
+rgba(44,62,80,0.70),
+rgba(52,73,94,0.65)
 );
 
 display:flex;
@@ -29,6 +75,9 @@ align-items:center;
 justify-content:center;
 
 }
+
+
+/* CONTENT */
 
 .bannercomponent-content{
 
@@ -57,10 +106,11 @@ opacity:0.9;
 }
 
 .separator{
-
 margin:0 8px;
-
 }
+
+
+/* ANIMATION */
 
 @keyframes fadeDown{
 
@@ -75,6 +125,9 @@ transform:translateY(0);
 }
 
 }
+
+
+/* MOBILE */
 
 @media(max-width:768px){
 

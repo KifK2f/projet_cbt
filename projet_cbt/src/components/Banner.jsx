@@ -40,7 +40,7 @@ const Banner = () => {
   const segments = path.split("/").filter(Boolean);
   const page = segments[0];
 
-  if (!page) return null; // pas de banner sur accueil
+  if (!page) return null;
 
   const title = page
     .replace(/[-_]/g, " ")
@@ -50,8 +50,16 @@ const Banner = () => {
 
   return (
 
-    <section className="bannercomponent">
+    <section className="bannercomponent position-relative overflow-hidden">
 
+      {/* IMAGE */}
+      <img
+        src="http://localhost:8000/storage/banner-image.jpg"
+        className="w-100 h-100 object-fit-cover banner-image"
+        alt="Banner"
+      />
+
+      {/* OVERLAY */}
       <div className="bannercomponent-overlay">
 
         <div className="bannercomponent-content">
@@ -61,9 +69,7 @@ const Banner = () => {
           <div className="bannercomponent-path">
 
             {section && (
-              <>
-                <span>{section}</span>
-              </>
+              <span>{section}</span>
             )}
 
             {page !== "contact" && (
@@ -82,6 +88,7 @@ const Banner = () => {
     </section>
 
   );
+
 };
 
 export default Banner;
