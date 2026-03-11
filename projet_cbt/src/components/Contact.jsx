@@ -125,8 +125,8 @@ const Contact = () => {
                 <div className="col-md-6">
                   <div className="contact-card">
                     <h5><PhoneIcon className="me-2 footer-icon"/>Téléphone</h5>
-                  (+228) 22 20 85 56 / 22 21 95 26 <br/>
-                  (+228) 91 12 72 92 / 97 68 40 25
+                  {/* (+228) 22 20 85 56 / 22 21 95 26 <br/> */}
+                  (+228) 91 12 72 92 <br />(+228) 97 68 40 25
                   </div>
                 </div>
 

@@ -101,7 +101,7 @@ const Evenements = () => {
       <div className="mb-5">
         <h4 className="section-subtitle">Dates Utiles {selectedYear}</h4>
 
-        <div className="row g-4 mt-3">
+        {/* <div className="row g-4 mt-3">
           {datesUtiles
             .filter(d => d.annee === selectedYear)
             .map(date => (
@@ -117,14 +117,14 @@ const Evenements = () => {
                 </div>
               </div>
             ))}
-        </div>
+        </div> */}
       </div>
 
       {/* ===== EVENEMENTS ===== */}
       <div>
         <h4 className="section-subtitle">Événements détaillés</h4>
 
-        <div className="row g-4 mt-3">
+        {/* <div className="row g-4 mt-3">
           {filteredEvents.map(event => {
 
             const isUpcoming = new Date(event.date) >= today;
@@ -163,7 +163,7 @@ const Evenements = () => {
               </div>
             );
           })}
-        </div>
+        </div> */}
       </div>
 
     </div>

@@ -16,10 +16,10 @@ const sectionMap = {
   "videos-predications": "Actualités et médias",
   "newsletters": "Actualités et médias",
 
-  "carte-eglises": "Nos églises",
-  "annuaire-region": "Nos églises",
-  "zones": "Nos églises",
-  "oeuvres-missions": "Nos églises",
+  "carte-eglises": "Nos églises et oeuvres",
+  "annuaire-region": "Nos églises et oeuvres",
+  "zones": "Nos églises et oeuvres",
+  "oeuvres-missions": "Nos églises et oeuvres",
 
   "bibliotheque": "Ressources",
   "telechargement": "Ressources",

@@ -121,7 +121,7 @@ const Zones = () => {
             <div className="col-lg-6 mt-4 mt-lg-0 animate-fade-in">
               <div className="card border-primary shadow">
                 <div className="card-header d-flex justify-content-between align-items-center">
-                  <h5 className="mb-0"><ChurchIcon className="me-2"/> Églises de {selectedZone.attributs.zone}</h5>
+                  <h5 className="mb-0"><ChurchIcon className="me-2"/> Eglises de la zone {selectedZone.attributs.zone}</h5>
                   <button className="btn-close btn-close-white" onClick={() => setSelectedZone(null)}></button>
                 </div>
                 <div className="card-body">
@@ -130,7 +130,8 @@ const Zones = () => {
                       <div key={eglise.id} className="list-group-item d-flex justify-content-between align-items-start py-3">
                         <div className="ms-2 me-auto">
                           <div className="fw-bold text-dark">{eglise.nom}</div>
-                          <small className="text-muted">Pasteur Titulaire : {eglise.pasteur}</small>
+                          <small className="text-muted">Pasteur Titulaire : {eglise.pasteur}</small> <br />
+                          <small className="text-muted"><PhoneIcon sx={{fontSize: 14}} /> 91 05 14 88</small>
                         </div>
                         {/* <span className="badge bg-soft-primary rounded-pill">Actif</span> */}
                       </div>

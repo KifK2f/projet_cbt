@@ -40,12 +40,19 @@ const DatesUtilesSection = () => {
         <h2>Dates Utiles {annee}</h2>
         <p>Les prochains rendez-vous institutionnels de la CBT</p>
         <div className="annee-selector mb-4">
-          {[2026, 2025].map(a => (
+          {[2026].map(a => (
             <button key={a} onClick={() => setAnnee(a)} className={`btn ${a === annee ? "btn-primary" : "btn-outline-primary"}`}>
               {a}
             </button>
           ))}
         </div>
+        {/* <div className="annee-selector mb-4">
+          {[2026, 2025].map(a => (
+            <button key={a} onClick={() => setAnnee(a)} className={`btn ${a === annee ? "btn-primary" : "btn-outline-primary"}`}>
+              {a}
+            </button>
+          ))}
+        </div> */}
       </div>
 
       <div className="dates-list">
