@@ -21,7 +21,7 @@ class Footer extends React.Component {
               <div className="d-flex align-items-center mb-3">
 
                 <img
-                  src={`http://localhost:8000/storage/CBT Logo.png`}
+                  src={`http://localhost:8000/storage/CBTLogo.png`}
                   alt="CBT Logo"
                   className="footer-logo me-3"
                 />

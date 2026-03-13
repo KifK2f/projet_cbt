@@ -1,15 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-import ag_26 from "../assets/images/ag-2026.jpeg"; 
-import ded1 from "../assets/images/dedicace-temple-Diguéngué/dedicace-Diguéngue_1.jpeg";
-import ded2 from "../assets/images/dedicace-temple-Diguéngué/dedicace-Diguéngue_2.jpeg";
-import ded3 from "../assets/images/dedicace-temple-Diguéngué/dedicace-Diguéngue_3.jpeg";
-import ded4 from "../assets/images/dedicace-temple-Diguéngué/dedicace-Diguéngue_4.jpeg";
-import ded5 from "../assets/images/dedicace-temple-Diguéngué/dedicace-Diguéngue_5.jpeg";
-
-import presidentCBT from "../assets/images/bureauCBT/PresidentCBT.jpeg"
-
 import "../assets/css/home.css"
+import HomeCarousel from "./Homecarousel ";
 
 //Section DatesUtilesSection 
 const DatesUtilesSection = () => {
@@ -68,188 +60,62 @@ const DatesUtilesSection = () => {
   );
 };
 
-// Section Croussel
-const HomeCarousel = ({ slides }) => {
-  return (
-    <div id="homeCarousel" className="carousel slide" data-bs-ride="carousel">
-      <div className="carousel-indicators">
-        {slides.map((_, idx) => (
-          <button
-            key={idx}
-            type="button"
-            data-bs-target="#homeCarousel"
-            data-bs-slide-to={idx}
-            className={idx === 0 ? "active" : ""}
-          ></button>
-        ))}
-      </div>
-
-      <div className="carousel-inner">
-        {slides.map((slide, idx) => (
-          <div key={idx} className={`carousel-item ${idx === 0 ? "active" : ""}`}>
-            <img
-              src={slide.image}
-              className="d-block w-100 carousel-img"
-              alt={slide.titre}
-            />
-            <div className="carousel-caption">
-              {slide.titre && <h1>{slide.titre}</h1>}
-              {slide.description && <p>{slide.description}</p>}
-              {slide.lienTexte && slide.lienURL && (
-                <a href={slide.lienURL} className="btn btn-lg carousel-btn">
-                  {slide.lienTexte}
-                </a>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <button
-        className="carousel-control-prev"
-        type="button"
-        data-bs-target="#homeCarousel"
-        data-bs-slide="prev"
-      >
-        <span className="carousel-control-prev-icon"></span>
-      </button>
-      <button
-        className="carousel-control-next"
-        type="button"
-        data-bs-target="#homeCarousel"
-        data-bs-slide="next"
-      >
-        <span className="carousel-control-next-icon"></span>
-      </button>
-    </div>
-  );
-};
-
-
 const Home = () => {
   const [slides, setSlides] = useState([]);
 
-// Simule un fetch depuis une API
-  useEffect(() => {
-    // Ici on pourra remplacer par fetch ou axios pour récupérer les données réelles
-    const dataFromAPI = [
-      {
-        image: ded1,
-        titre: "Présentation institutionnelle",
-        description: "Découvrez notre mission et notre vision.",
-        lienTexte: "Faire un don",
-        lienURL: "/don",
-      },
-      {
-        image: ag_26,
-        titre: "Actualités à la une",
-        description: "Info pour l'assemblé générale de 2026",
-        lienTexte: "Actualités",
-        lienURL: "/actualites",
-      },
-      {
-        image: ded2,
-        titre: "Prochains événements",
-        description: "Ne manquez pas nos activités et rencontres à venir.",
-        lienTexte: "Voir événements",
-        lienURL: "/evenements",
-      },
-    ];
+// // Simule un fetch depuis une API
+//   useEffect(() => {
+//     // Ici on pourra remplacer par fetch ou axios pour récupérer les données réelles
+//     const dataFromAPI = [
+//       {
+//         image: "http://localhost:8000/storage/slider1.jpeg",
+//         titre: "Présentation institutionnelle",
+//         description: "Découvrez notre mission et notre vision.",
+//         lienTexte: "Faire un don",
+//         lienURL: "/don",
+//       },
+//       {
+//         image: "http://localhost:8000/storage/slider2.jpeg",
+//         titre: "Actualités à la une",
+//         description: "Info pour l'assemblé générale de 2026",
+//         lienTexte: "Actualités",
+//         lienURL: "/actualites",
+//       },
+//       {
+//         image: "http://localhost:8000/storage/slider3.jpeg",
+//         titre: "Prochains événements",
+//         description: "Ne manquez pas nos activités et rencontres à venir.",
+//         lienTexte: "Voir événements",
+//         lienURL: "/evenements",
+//       },
+//             {
+//         image: "http://localhost:8000/storage/AG-2026.jpeg",
+//         titre: "Présentation institutionnelle",
+//         description: "Découvrez notre mission et notre vision.",
+//         lienTexte: "Faire un don",
+//         lienURL: "/don",
+//       },
+//       {
+//         image:"http://localhost:8000/storage/slider2.jpeg",
+//         titre: "Actualités à la une",
+//         description: "Info pour l'assemblé générale de 2026",
+//         lienTexte: "Actualités",
+//         lienURL: "/actualites",
+//       },
+//     ];
 
-    setSlides(dataFromAPI);
-  }, []);
+//     setSlides(dataFromAPI);
+//   }, []);
 
 
     return (
       <>
       {/* Section Hero */}
+      <HomeCarousel/>
 
-{/* <section className="position-relative">
-  <img 
-    src={ded1}
-    className="w-100"
-    alt="CBT"
-    style={{height: "600px", objectFit: "cover"}}
-  />
-
-  <div className="position-absolute top-50 start-50 translate-middle text-center text-white">
-    <h1 className="display-4 fw-bold">
-      Construire une communauté forte dans la foi
-    </h1>
-    <p className="lead">
-      Ensemble, portons la vision du Royaume et impactons notre génération.
-    </p>
-    <div className="mt-4">
-      <a href="/don" className="btn btn-primary btn-lg rounded-pill px-4 me-3">
-        Faire un don
-      </a>
-      <a href="/mission-valeurs" className="btn btn-outline-light btn-lg rounded-pill px-4">
-        Découvrir notre mission
-      </a>
-    </div>
-  </div>
-</section> */}
-
-
-        {/* <div id="homeCarousel" className="carousel slide" data-bs-ride="carousel">
-          
-          <div className="carousel-indicators">
-            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" className="active"></button>
-            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2"></button>
-          </div>
-
-          <div className="carousel-inner">
-
-            <div className="carousel-item active">
-              <img src={ag_26} className="d-block w-100" alt="Slide 1" style={{height: '32rem', objectFit: 'cover'}} />
-              <div className="container">
-                <div className="carousel-caption text-start">
-                  <h1>Présentation institutionnelle</h1>
-                  <p>Découvrez notre mission et notre vision.</p>
-                  <p><a className="btn btn-lg" style={{ backgroundColor: '#4b9cde'}} href="/don">Faire un don</a></p>
-                </div>
-              </div>
-            </div>
-
-            <div className="carousel-item">
-              <img src={ded2} className="d-block w-100" alt="Slide 2" style={{height: '32rem', objectFit: 'cover'}} />
-              <div className="container">
-                <div className="carousel-caption">
-                  <h1>Actualités à la une</h1>
-                  <p>Restez informé des dernières nouvelles de la CBT.</p>
-                  <p><a className="btn btn-lg" style={{ backgroundColor: '#4b9cde'}} href="/actualites">Voir actualités</a></p>
-                </div>
-              </div>
-            </div>
-
-            <div className="carousel-item">
-              <img src={ded3} className="d-block w-100" alt="Slide 3" style={{height: '32rem', objectFit: 'cover'}} />
-              <div className="container">
-                <div className="carousel-caption text-end">
-                  <h1>Prochains événements</h1>
-                  <p>Ne manquez pas nos activités et rencontres à venir.</p>
-                  <p><a className="btn btn-lg" style={{ backgroundColor: '#4b9cde'}} href="/evenements">Voir événements</a></p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <button className="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon"></span>
-          </button>
-
-          <button className="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
-            <span className="carousel-control-next-icon"></span>
-          </button>
-
-        </div> */}
-
-      {/* Section Hero */}
-    <div>
+    {/* <div>
       <HomeCarousel slides={slides} />
-    </div>
+    </div> */}
 
     {/* Section Date utiles */}
     <DatesUtilesSection />
@@ -275,7 +141,7 @@ const Home = () => {
 
     <div className="col-md-6">
       <img 
-        src={ded2}
+        src={`http://localhost:8000/storage/missions.jpeg`}
         className="img-fluid rounded-4 shadow"
         style={{height: "400px", objectFit: "cover", width:"100%"}}
         alt="Mission"
@@ -304,7 +170,7 @@ const Home = () => {
                   }}
                 ></div>
                 <img 
-                  src={presidentCBT} // Remplace par la photo du président
+                  src={`http://localhost:8000/storage/PresidentCBT_1772207850.jpeg`}
                   alt="Président de la CBT" 
                   className="img-fluid rounded-4 shadow-lg"
                   style={{ width: '100%', height: '500px', objectFit: 'cover' }}
@@ -359,7 +225,9 @@ const Home = () => {
 
       <div className="col-md-4">
         <div className="card border-0 shadow-sm rounded-4 h-100">
-          <img src={ded3} className="card-img-top" style={{height:"250px", objectFit:"cover"}} />
+          <img 
+          src={`http://localhost:8000/storage/formationBibl.jpeg`}
+          className="card-img-top" style={{height:"250px", objectFit:"cover"}} />
           <div className="card-body">
             <h5 className="fw-bold">Formations Bibliques</h5>
             <p className="text-muted small">
@@ -371,7 +239,9 @@ const Home = () => {
 
       <div className="col-md-4">
         <div className="card border-0 shadow-sm rounded-4 h-100">
-          <img src={ded4} className="card-img-top" style={{height:"250px", objectFit:"cover"}} />
+          <img 
+           src={`http://localhost:8000/storage/actionSociale.jpeg`} 
+          className="card-img-top" style={{height:"250px", objectFit:"cover"}} />
           <div className="card-body">
             <h5 className="fw-bold">Actions Sociales</h5>
             <p className="text-muted small">
@@ -383,7 +253,9 @@ const Home = () => {
 
       <div className="col-md-4">
         <div className="card border-0 shadow-sm rounded-4 h-100">
-          <img src={ded5} className="card-img-top" style={{height:"250px", objectFit:"cover"}} />
+          <img 
+          src={`http://localhost:8000/storage/eveSpritituel.jpeg`}
+          className="card-img-top" style={{height:"250px", objectFit:"cover"}} />
           <div className="card-body">
             <h5 className="fw-bold">Événements Spirituels</h5>
             <p className="text-muted small">

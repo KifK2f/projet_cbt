@@ -31,7 +31,7 @@ const Navbar = () => {
 
         <NavLink to="/">
           <img
-            src="http://localhost:8000/storage/CBT Logo.png"
+            src="http://localhost:8000/storage/CBTLogo.png"
             alt="Logo CBT"
             className="logo"
           />
