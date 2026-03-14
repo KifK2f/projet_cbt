@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import "../assets/css/homecarousel.css";
 
-const AUTO_SLIDE_DELAY = 8000;
+const AUTO_SLIDE_DELAY = 3000;
 // valeur	vitesse
 // 3000	rapide
 // 5000	normal
