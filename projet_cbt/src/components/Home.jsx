@@ -10,13 +10,13 @@ const DatesUtilesSection = () => {
 
   useEffect(() => {
     setDatesUtiles([
-      { id: 1, titre: "Dimanche de la formation théologique", date: "2026-01-25", type: "Spirituel" },
-      { id: 2, titre: "Comité Exécutif", date: "2026-02-23", type: "Administratif" },
-      { id: 3, titre: "Assemblée Générale", date: "2026-03-16", type: "Administratif" },
-      { id: 4, titre: "Dimanche de Pentecôte", date: "2026-05-24", type: "Spirituel" },
-      { id: 5, titre: "Mois de la Mission", date: "2026-06-01", type: "Spirituel" },
-      { id: 6, titre: "Retraite annuelle", date: "2025-07-15", type: "Spirituel" },
-      { id: 7, titre: "Assemblée Extraordinaire", date: "2025-09-10", type: "Administratif" },
+      { id: 1, titre: "Dimanche de la formation théologique", date: "2026-01-25" },
+      { id: 2, titre: "Comité Exécutif", date: "2026-02-23"  },
+      { id: 3, titre: "Assemblée Générale", date: "2026-03-16"  },
+      { id: 4, titre: "Dimanche de Pentecôte", date: "2026-05-24"  },
+      { id: 5, titre: "Mois de la Mission", date: "2026-06-01"  },
+      { id: 6, titre: "Retraite annuelle", date: "2025-07-15"  },
+      { id: 7, titre: "Assemblée Extraordinaire", date: "2025-09-10"  },
     ]);
   }, []);
 
@@ -52,7 +52,6 @@ const DatesUtilesSection = () => {
           <div key={d.id} className="date-item">
             <div className="date">{formatDate(d.date)}</div>
             <div className="titre">{d.titre}</div>
-            <span className={`badge ${d.type === "Spirituel" ? "badge-spirituel" : "badge-admin"}`}>{d.type}</span>
           </div>
         ))}
       </div>
