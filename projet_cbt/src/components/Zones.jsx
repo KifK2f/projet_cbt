@@ -7,6 +7,7 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import ChurchIcon from "@mui/icons-material/Church";
 import CloseIcon from "@mui/icons-material/Close";
 import DateRangeIcon from '@mui/icons-material/DateRange';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 import ZoneService from "../service/ZoneService";
 import EgliseService from "../service/EgliseService";
@@ -98,7 +99,9 @@ const Zones = () => {
             >
               <DateRangeIcon style={{ color : '#4b9cde'}}/>
               Année {annee}
-              <span className={`arrow ${openDropdown ? "rotate" : ""}`}>▾</span>
+              <span className={`arrow ${openDropdown ? "rotate" : ""}`}>
+                <ArrowDropDownIcon />
+              </span>
             </button>
 
             {openDropdown && (

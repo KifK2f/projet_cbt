@@ -5,7 +5,7 @@ import TodayIcon from "@mui/icons-material/Today";
 import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 import HistoryIcon from "@mui/icons-material/History";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 
 const DatesUtiles = () => {
@@ -64,7 +64,9 @@ const DatesUtiles = () => {
 						onClick={() => setOpenDropdown(!openDropdown)}
 					>
 						Année {annee}
-						<span className={`arrow ${openDropdown ? "rotate" : ""}`}>▾</span>
+						<span className={`arrow ${openDropdown ? "rotate" : ""}`}>
+                            <ArrowDropDownIcon />
+                        </span>
 					</button>
 					{openDropdown && (
 						<div className="year-dropdown-menu">
