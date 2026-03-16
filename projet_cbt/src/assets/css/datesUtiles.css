@@ -1,0 +1,137 @@
+/* Modern Dates Utiles Styles */
+.dates-section-modern {
+	background: linear-gradient(120deg, #f7fbff 60%, #e3f0fa 100%);
+	padding: 60px 3vw 40px 3vw;
+	min-height: 100vh;
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	box-sizing: border-box;
+}
+.dates-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
+	margin-bottom: 36px;
+}
+.header-icon {
+	font-size: 2.5rem !important;
+	color: #4b9cde;
+}
+.dates-title-modern {
+	font-size: 2.1rem;
+	font-weight: 800;
+	color: #2563eb;
+	letter-spacing: 1px;
+	margin: 0;
+}
+.dates-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 28px;
+	width: 100%;
+	max-width: none;
+	margin: 0;
+	padding: 0 2vw;
+}
+.date-card {
+	background: #fff;
+	border-radius: 18px;
+	box-shadow: 0 4px 24px rgba(75, 156, 222, 0.10);
+	padding: 28px 22px 22px 22px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	position: relative;
+	transition: transform 0.18s, box-shadow 0.18s;
+	min-height: 160px;
+}
+.date-card:hover {
+	transform: translateY(-6px) scale(1.025);
+	box-shadow: 0 8px 32px rgba(75, 156, 222, 0.18);
+}
+.date-card-label {
+	margin-bottom: 10px;
+}
+.badge {
+	display: inline-block;
+	padding: 6px 16px;
+	border-radius: 20px;
+	font-size: 1rem;
+	font-weight: 700;
+	color: #fff;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+	letter-spacing: 0.5px;
+}
+.badge-present {
+	background: linear-gradient(90deg, #4b9cde 60%, #2563eb 100%);
+}
+.badge-future {
+	background: linear-gradient(90deg, #2ecc71 60%, #27ae60 100%);
+}
+.badge-past {
+	background: linear-gradient(90deg, #95a5a6 60%, #7f8c8d 100%);
+}
+.date-card-icon {
+	margin-bottom: 12px;
+	font-size: 2.1rem;
+	color: #4b9cde;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+.date-card.present .date-card-icon {
+	color: #2563eb;
+}
+.date-card.future .date-card-icon {
+	color: #27ae60;
+}
+.date-card.past .date-card-icon {
+	color: #7f8c8d;
+}
+.date-card-content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.date-card-title {
+	font-size: 1.13rem;
+	font-weight: 700;
+	color: #222;
+	margin-bottom: 2px;
+}
+.date-card-desc {
+	font-size: 0.98rem;
+	color: #4b9cde;
+	opacity: 0.8;
+}
+@media (max-width: 600px) {
+	.dates-section-modern {
+		padding-left: 4vw;
+		padding-right: 4vw;
+	}
+	.dates-header {
+		flex-direction: column;
+		gap: 8px;
+	}
+	.dates-title-modern {
+		font-size: 1.3rem;
+	}
+	.dates-grid {
+		grid-template-columns: 1fr;
+		gap: 18px;
+	}
+	.date-card {
+		padding: 18px 10px 14px 10px;
+		min-height: 120px;
+	}
+	.badge {
+		font-size: 0.95rem;
+		padding: 5px 12px;
+	}
+}

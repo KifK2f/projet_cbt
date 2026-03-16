@@ -2,109 +2,13 @@ import React, { useEffect, useState } from "react";
 
 import "../assets/css/home.css"
 import HomeCarousel from "./Homecarousel ";
+import DatesUtiles from "./DatesUtiles";
 
 //Section DatesUtilesSection 
-const DatesUtilesSection = () => {
-  const [datesUtiles, setDatesUtiles] = useState([]);
-  const [annee, setAnnee] = useState(2026);
 
-  useEffect(() => {
-    setDatesUtiles([
-      { id: 1, titre: "Dimanche de la formation théologique", date: "2026-01-25" },
-      { id: 2, titre: "Comité Exécutif", date: "2026-02-23"  },
-      { id: 3, titre: "Assemblée Générale", date: "2026-03-16"  },
-      { id: 4, titre: "Dimanche de Pentecôte", date: "2026-05-24"  },
-      { id: 5, titre: "Mois de la Mission", date: "2026-06-01"  },
-      { id: 6, titre: "Retraite annuelle", date: "2025-07-15"  },
-      { id: 7, titre: "Assemblée Extraordinaire", date: "2025-09-10"  },
-    ]);
-  }, []);
-
-  const formatDate = (dateStr) => {
-    const [year, month, day] = dateStr.split("-");
-    const dateObj = new Date(year, month - 1, day);
-    return dateObj.toLocaleDateString("fr-FR", { day: "2-digit", month: "short" });
-  };
-
-  return (
-    <section className="dates-utiles-section">
-      <div className="text-center mb-4">
-        <h2>Dates Utiles {annee}</h2>
-        <p>Les prochains rendez-vous institutionnels de la CBT</p>
-        <div className="annee-selector mb-4">
-          {[2026].map(a => (
-            <button key={a} onClick={() => setAnnee(a)} className={`btn ${a === annee ? "btn-primary" : "btn-outline-primary"}`}>
-              {a}
-            </button>
-          ))}
-        </div>
-        {/* <div className="annee-selector mb-4">
-          {[2026, 2025].map(a => (
-            <button key={a} onClick={() => setAnnee(a)} className={`btn ${a === annee ? "btn-primary" : "btn-outline-primary"}`}>
-              {a}
-            </button>
-          ))}
-        </div> */}
-      </div>
-
-      <div className="dates-list">
-        {datesUtiles.filter(d => new Date(d.date).getFullYear() === annee).map(d => (
-          <div key={d.id} className="date-item">
-            <div className="date">{formatDate(d.date)}</div>
-            <div className="titre">{d.titre}</div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-};
 
 const Home = () => {
-  const [slides, setSlides] = useState([]);
-
-// // Simule un fetch depuis une API
-//   useEffect(() => {
-//     // Ici on pourra remplacer par fetch ou axios pour récupérer les données réelles
-//     const dataFromAPI = [
-//       {
-//         image: "http://localhost:8000/storage/slider1.jpeg",
-//         titre: "Présentation institutionnelle",
-//         description: "Découvrez notre mission et notre vision.",
-//         lienTexte: "Faire un don",
-//         lienURL: "/don",
-//       },
-//       {
-//         image: "http://localhost:8000/storage/slider2.jpeg",
-//         titre: "Actualités à la une",
-//         description: "Info pour l'assemblé générale de 2026",
-//         lienTexte: "Actualités",
-//         lienURL: "/actualites",
-//       },
-//       {
-//         image: "http://localhost:8000/storage/slider3.jpeg",
-//         titre: "Prochains événements",
-//         description: "Ne manquez pas nos activités et rencontres à venir.",
-//         lienTexte: "Voir événements",
-//         lienURL: "/evenements",
-//       },
-//             {
-//         image: "http://localhost:8000/storage/AG-2026.jpeg",
-//         titre: "Présentation institutionnelle",
-//         description: "Découvrez notre mission et notre vision.",
-//         lienTexte: "Faire un don",
-//         lienURL: "/don",
-//       },
-//       {
-//         image:"http://localhost:8000/storage/slider2.jpeg",
-//         titre: "Actualités à la une",
-//         description: "Info pour l'assemblé générale de 2026",
-//         lienTexte: "Actualités",
-//         lienURL: "/actualites",
-//       },
-//     ];
-
-//     setSlides(dataFromAPI);
-//   }, []);
+ 
 
 
     return (
@@ -117,7 +21,7 @@ const Home = () => {
     </div> */}
 
     {/* Section Date utiles */}
-    <DatesUtilesSection />
+    <DatesUtiles />
 
 
 
