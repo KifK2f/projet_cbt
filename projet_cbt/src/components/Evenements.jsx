@@ -7,11 +7,12 @@ const Evenements = () => {
  
 
   return (
-    <div className="container py-5" style={{ background: "linear-gradient(120deg, #f7fbff 60%, #e3f0fa 100%)" }}>
+    // <div className="container py-5" style={{ background: "linear-gradient(120deg, #f7fbff 60%, #e3f0fa 100%)" }}>
+    <div className="evenements-full-bg">
 
-      <h2 className="text-center fw-bold mb-4">
+      {/* <h2 className="text-center fw-bold mb-4">
         Calendrier & Événements CBT
-      </h2>
+      </h2> */}
 
      
       {/* ===== DATES UTILES ===== */}

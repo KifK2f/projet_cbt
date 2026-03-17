@@ -6,13 +6,6 @@ const api = axios.create({
   baseURL: AppConstants.BACKEND_URL,
 });
 
-// const api = axios.create({
-//   baseURL: AppConstants.BACKEND_URL,
-//   headers: {
-//     Authorization: `Bearer ${localStorage.getItem('token')}`
-//   }
-// });
-
 class ZoneService {
  // récupérer toutes les zones
   getAllZones() {
