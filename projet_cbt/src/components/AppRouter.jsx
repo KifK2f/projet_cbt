@@ -10,6 +10,7 @@ import Zones from './Zones'
 import Dons from './Dons'
 import ConfessionFoi from './ConfessionFoi'
 import Contact from './Contact'
+import GaleriePhotos from './GaleriePhotos'
 
 
 // Composant générique pour les pages
@@ -42,7 +43,7 @@ const AppRouter = () => {
         {/* Actualités et médias */}
         <Route path="/actualites" element={<Page title="Actualités" />} />
         <Route path="/evenements" element={<Evenements/>} />
-        <Route path="/galerie" element={<Page title="Galerie photos" />} />
+        <Route path="/galerie" element={<GaleriePhotos />} />
         <Route path="/videos-predications" element={<Page title="Vidéos et prédications" />} />
         <Route path="/newsletters" element={<Page title="Newsletters" />} />
 
